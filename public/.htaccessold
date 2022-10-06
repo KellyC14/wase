@@ -1,0 +1,18 @@
+RewriteEngine On
+RewriteRule ^/$ /views/pages/login.page.php [R] 
+RewriteRule ^$ /views/pages/login.page.php [R]
+RewriteCond %{SERVER_PORT} !443
+RewriteRule http:(.*) https:$1 [R] 
+#RewriteRule ^Princeton/?$ /Princeton/views/pages/login.page.php [R]
+#RewriteRule ^Princeton/(.*) $1
+#RewriteRule ^Yale/?$ /Yale/views/pages/login.page.php [R]
+#RewriteRule ^Yale/(.*) $1
+Options -Indexes
+<Files *.txt>
+order allow,deny
+deny from all
+</Files>
+php_flag display_errors on
+php_flag display_startup_errors on
+#php_value error_reporting 127
+php_value error_reporting 85

@@ -1,0 +1,270 @@
+#
+# This is the WASE CUSTOM parameters file.
+#
+#
+# Please enter the appropriate values below (generally by replacing the value between the double-quote marks on each line,
+# or by entering an unquoted number).  If the parameter does not apply, code it as a null string ("").
+#
+#
+# Global control of the WASE system.
+# 
+# Turns the system ON or OFF.
+RUNNING: 1
+# Message to display when the system is down (RUNNING=0).
+DOWNMSG: "06/24/2011 9:35 am.  The system is being upgraded to release 4.0 and should be back up by 9:45 am."
+# An alert msg that is displayed until it is set to nulls.
+ALERTMSG: ""
+# Require SSL connection (HTTPS).
+REQSSL: 1
+# Timezone (if not set, PHP uses server value).  Be sure you enter a valid timezone designation (http://php.net/manual/en/timezones.php).
+# Example: TIMEZONE: "America/New_York"
+TIMEZONE: "America/New_York"
+#
+# The following parameters identify your institution.
+#
+# The DNS domain name of your institution.
+# Example: DOMNAME: "princeton.edu"
+DOMNAME: "yourinstitution.edu"
+# The long name of your institution.
+# Example: INSFNAME: "Princeton University"
+INSFNAME: "Your Institution Name"
+# The link to the institution home page
+# Example: INSHOMELINK: "http://www.princeton.edu"
+INSHOMELINK: "http://www.yourinstitution.edu"
+# The link to the institution's privacy statement.  Leave blank if none.
+PRIVACY_URL: ""
+# URL for a help page on netids. Leave blank if none.
+# Example: HELPNETID: "http://helpdesk.princeton.edu/kb/display.plx?id=5240"
+HELPNETID: ""
+# URL for a help page on passwords. Leave blank if none.
+# Example: HELPPASS: "http://helpdesk.princeton.edu/kb/display.plx?id=9288"
+HELPPASS: ""
+#
+# Lists of authorized userdids (netids).  These are local userids on your system.
+#
+# Users who can edit the WASE daytypes calendar, in addition to super_users.
+CALENDAR_USERS: ""
+# Users who can send email to WASE users, in addition to super_users.
+EMAIL_USERS: ""
+# Users who can generate lists of WASE users, in addition to super_users.
+LIST_USERS: ""
+# Users who can update the didyouknow table, in addition to super_users.
+DIDYOUKNOW_USERS: ""
+# Users who can inquire about available slots on any calendar, in addition to super_users.
+SLOTS_USERS: ""
+# Users who can register users in the LOCAL database (only relevant if using LOCAL authentication)
+REGISTER_USERS: ""
+# Users who can use the reown admin utility to nre-assign calendar/block ownership.
+REOWN_USERS: ""
+#
+# Password that, along with the database password, can be used to login as someone else.  Leave blank to disable.
+IMPERSONATEPASS: ""
+#
+# The following parameters define the way you label the objects manaipulated by WASE.
+# Change these if you are using WASE to schedule something other than office hours.
+# if you change the system name, you should also create a new logo.
+#
+# The word/phrase used to refer to a netid/userid at your institution.
+# Example: NETID: "Userid"
+NETID: "Userid"
+# The word/phrase used to refer to a login password.
+# Example: PASSNAME: "Password"
+PASSNAME: "Password"
+# The short name of this system, as it appears to the user on various web pages.
+SYSID: "WASE"
+# The full name of this system, as it appears to the user on various web pages.
+SYSNAME: "Web Appointment Scheduling Engine"
+# The name of the thing being scheduled.
+NAME: "office hour"
+# What you call an appointment (e.g., Reservations)
+APPOINTMENT: "appointment"
+# Plural of the name of the thing being scheduled.
+NAMES: "office hours"
+# Plura of what you call appointments
+APPOINTMENTS: "appointments"
+#
+# The following parameters control how WASE communicates with the suppprt team at your institution.
+#
+# The name and contact information for the group that supports WASE.
+# Example: CONTACTNAME: "Serge Goldstein"
+CONTACTNAME: "Your Name"
+# Email address to which users should direct questions.
+# Example: CONTACTEMAIL: "serge@princeton.edu"
+CONTACTEMAIL: "youremail@yourinstitution"
+# Phone number to which users should direct questions.
+# Example: CONTACTPHONE: "(609) 258-6059"
+CONTACTPHONE: "(555) 555-5555"
+# Email address to which error notifications should be sent (used as the Errors-To field on email sent out by WASE ).
+# Example: SYSMAIL: "serge@princeton.edu"
+SYSMAIL: "youremail@yourinstitution"
+# Email address to which reminder summary should be sent (counts of how many reminders were sent out)
+# Example: REMEMAIL: "youremail@yourinstitution"
+REMEMAIL: "youremail@yourinstitution"
+# Email address that log messages should be sent to (in addition to the standard log).
+# Example: LOGMAIL: "serge@princeton.edu"
+LOGMAIL: "youremail@yourinstitution"
+# The email address to be used by WASE in the From header of any emails it sends out.
+# Example: FROMMAIL: "wase@princeton.edu"
+FROMMAIL: "wase@yourinstitution.edu"
+# The noreply email address for the institution
+# Example: "noreply@princeton.edu"
+NOREPLYMAIL: "noreply@yourinstitution.edu"
+# Send summary email about reminders to SYSMAIL (how many reminders got sent out).
+MAILREM: 1
+# Send email to SYSMAIL whenever a calendar is created or deleted.
+MAILCAL: 1
+#
+# The following parameters control various WASE features.  Leave as is unless you have
+# a particular reason for turning a feature off.
+#
+# Turn on wait list functionality.
+WAITLIST: 1
+#
+# Turn on user view/sign-up limits (allows professor to optionally specify users who can make/view appointments).
+USERLIM: 1
+#
+# Should email validity be tested? WARNING: turning this on will slow WASE down considerably, as it requires WASE
+# to engage in an interchange with a mail server whenever an email address is entered.
+TESTEMAIL: 0
+#
+#
+# Parameters used by WASE to update local Exchange calendars.  Leave blank if you do not want Exchange integration.
+#
+# Exchange server host name
+EXCHANGE_HOST: ""
+# The email address for login to Exchange
+EXCHANGE_EMAIL : ""
+# The username for login to Exchange
+EXCHANGE_USER: ""
+# The password for login to Exchange
+EXCHANGE_PASSWORD: ""
+# The Exchange version
+EXCHANGE_VERSION: ""
+# The type of Exchange integration:  direct or not (by invitation)
+EXCHANGE_DIRECT: 1
+#
+# Parameters used by WASE to update Office365 calendars (Exchange in the cloud).  Leave blank if you do not want Office365 integration.
+#
+# Exchange server host name
+O365_HOST: ""
+# The email address for login to Exchange
+O365_EMAIL : ""
+# The username for login to Exchange
+O365_USER: ""
+# The password for login to Exchange
+O365_PASSWORD: ""
+# The Exchange version
+O365_VERSION: 'Exchange2016'
+# The type of Exchange integration:  direct or not (by invitation)
+O365_DIRECT: 1
+
+#
+# The following parameter controls how recurring office hour blocks are created.
+# When a professor/dean/whomever adds a recurring block of time to their WASE calendar, they can specify
+# the day "types" on which they want the blocks to be added.  For example, they could add a recurring block
+# of time every Thurday from 2pm until 4pm from September through December, but only want blocks on the
+# "Teaching" days that fall in that range (i.e., don't put a block on Thanksgiving!).  To do this, WASE needs
+# a list of the day "types" at your institution, and you need to set up the daytype calendar using a supplied administrative
+# script.  If you don't want to use this feature, simply leave the daytypes variable null.
+#
+# A list of the names of all the types of days on your daytype calendar.  Leave null if you are not using daytype support.
+# If you are using daytype support, you MUST code at least two daytypes, or WASE will treat this parm as though it were null
+# (there is no point in having one daytype).
+# WASE will treat the first daytype as the "default" daytype, the daytype to assign to a date for which you
+# have not specified a daytype on your WASE academic calendar (something you do using a supplied administrative script).
+# Example: DAYTYPES: "Teaching,Holiday,Fall,Spring,Winter,Summer,Recess,Reading,Exam,Midterms"
+DAYTYPES: "Teaching,Holiday,Fall,Spring,Winter,Summer,Recess,Reading,Exam,Midterm"
+#
+# The following parameters affect the display of default block start/end dates.
+#
+# Date of the start of the current term/semester, as YYYY-MM-DD
+CURTERMSTART: "2017-09-01"
+# Date of the end of the current term/semester (last day of term), as YYYY-MM-DD
+CURTERMEND: "2018-01-31"
+# Date of the start of the next term/semester, as YYYY-MM-DD
+NEXTTERMSTART: "2018-02-01"
+# Date of the end of the next term/semester (last day of term), as YYYY-MM-DD
+NEXTTERMEND: "2018-06-01"
+# Date of the start of the academic year, as YYYY-MM-DD
+CURYEARSTART: "2017-09-01"
+# Date of the end of the academic year, as YYYY-MM-DD
+CURYEAREND: "2018-06-01"
+#
+#
+# The LMS you are running:  valid values are Blackboard and BlackboardPrinceton.
+# Example: LMS: "Blackboard"
+LMS: ""
+# A flag indicating whether or not course calendars are supported (requires LMS integration)
+COURSECALS: 0
+# Turn on course view/sign-up limits (only users in specified courses can make appointments; requires LMS integration).
+COURSELIM: 0
+# Course identifier prompt
+COURSEIDPROMPT: "Enter course identifier"
+#
+# The following fields are for allowing and displaying 'Restricted' Access Restrictions on Blocks (View Blocks/Make Appt).
+#
+# Whether or not to allow appointment view/make to be restricted by AD group ID.
+ADRESTRICTED: 0
+# The prompt for entering an LDAP/AD group name when restricting by AD group membership
+GROUPIDPROMPT: "Enter an Active Directory (AD or LDAP) group name"
+# Turn on status view/sign-up limits (only users with specified statuses can make appointments). Blank indicates not turned on
+# Example: STATUS_ATTRIBUTE: "edupersonaffiliation"
+STATUS_ATTRIBUTE: ""
+# Status names and associated values
+STATUS_NAMES: "affiliate,alumni,employee,faculty,member,staff,student"
+# Status values in the directory corresponding to above names
+STATUS_VALUES: "affiliate,alum,employee,faculty,member,staff,student"
+# The prompt for entering a status when restricting by status
+STATUSPROMPT: "Select user status"
+# The prompt for entering a user ID when restricting by user
+USERPROMPT: "Enter a NetID (user ID)"
+#
+# WASE is a stand-alone web application.  You can, in addition, run it as
+# an LTI tool.  To do so, you need to configure WASE in your LMS.  You can do this
+# in any LTI 1.0 compliant LMS (not just the ones listed above).
+#
+# The following parameters control LTI integration.  Please read the admin document for fuller LTI configuration instructions.
+#
+# To use LTI, you need to go into your LMS and add WASE as an LTI Tool Provider.  To do that,
+# you will need to enter the following launch URL into your LMS LTI
+# configuration form (substitute your short institution name, as specified above, in the line below and in your LMS).
+LTILAUNCH: "https://wase.princeton.edu/yourinstitution/views/pages/ltilaunch.php"
+#
+# You will also need to invent an LTI "key" and shared password.  Those
+# can be whatever you like.  Specify the values you
+# configured in your LMS below (they have to match).
+# LTI key for LTI login
+LTIKEY: ""
+# LTI secret
+LTISECRET: ""
+#
+#
+# Parameters for the generic Blackboard web services.  Fill in these fields only if you are using Blackboard as your LMS
+# and you want users to be able to restrict appointments based on course enrollment.  Leave blank otherwise.
+
+# URL of Blackboard server (without a closing /)
+BLACKBOARD_URL: ""
+# Proxy Tool registration password for Learn 9 server
+BLACKBOARD_REGISTRATION_PASSWORD: "" 
+# Vendor ID of WASE
+BLACKBOARD_VENDOR_ID: "PrincetonUniversity"
+# The ID of the tool
+BLACKBOARD_PROGRAM_ID: "WASE"
+# A description of the tool
+BLACKBOARD_TOOL_DESCRIPTION: "A proxy tool to allow WASE to communicate with Blackboard Learn"
+# A shared secret
+BLACKBOARD_SHARED_SECRET:  ""
+# blackboard REST API parms
+BLACKBOARDREST_HOST: ""
+BLACKBOARDREST_KEY:  ""
+BLACKBOARDREST_SECRET:  ""
+# blackboard rest api paths
+BLACKBOARDREST_AUTH_PATH:  ""
+BLACKBOARDREST_DSK_PATH:  ""
+BLACKBOARDREST_TERM_PATH:  ""
+BLACKBOARDREST_COURSE_PATH:  ""
+BLACKBOARDREST_USER_PATH:  ""
+BLACKBOARDREST_COURSE_V2_PATH:  ""
+# userid to store blackboard cached values in Prefs table
+BLACKBOARDREST_USERID:  "BLACKBOARD_REST"
+# END OF CUSTOM PARAMETERS

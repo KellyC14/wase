@@ -1,0 +1,30 @@
+body {
+	background-color: #5B5D60;
+	color: #FFFFFF;	
+}
+
+table {
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid #FFFFFF;
+}
+
+#divHeaderLogo {
+	height: 110px;
+	background-position: top left;
+ 	background-image: url(../views/images/waselogo.gif);
+	background-repeat: no-repeat;
+	repeat: no-repeat;
+	margin: 0;
+}
+
+.submit {
+	width:100px; 
+	height:100px;
+	font-size:24px;
+}
+
+
+
+

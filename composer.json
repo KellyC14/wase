@@ -1,0 +1,51 @@
+{
+  "name": "princeton/wase",
+  "description": "Web Appointment Scheduling Engine: Publish appointment availability, support appointment scheduling.",
+  "config": {
+    "component-dir": "public/components",
+    "component-baseurl": "components"
+  },
+  "require" : {
+    "zendframework/zend-stdlib" : "2.2.*",
+    "zendframework/zend-config" : "2.2.*",
+    "zendframework/zend-db" : "2.2.*",
+    "symfony/yaml" : "^4.3",
+    "symfony/serializer" : "^2.8",
+    "php-ews/php-ews" : "dev-master",
+    "jamesiarmes/php-ntlm": "dev-master", 
+    "google/apiclient" : "~1.1",
+    "princeton/app-bundle": "*@dev",
+    "jasig/phpcas" : "dev-master",
+    "ext-soap": "*",
+    "simplesamlphp/simplesamlphp" : "1.17.7",
+    "components/underscore" : "~1.8",
+    "components/jquery" : "1.12.0",
+    "moment/moment": "~2.9.0",
+    "backstrap/moment-interval": "dev-master",
+    "backstrap/mobiscroll": "dev-master",
+    "backstrap/jquery-mobile": "dev-dev-1.4.2",
+    "symfony/process": "~2.5",
+    "phpmailer/phpmailer": "^6.0"
+  },
+  "repositories" : [      
+    { 
+      "type": "vcs",  
+      "url": "https://github.com/princeton/app-bundle"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/backstrap/mobiscroll"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/backstrap/moment-interval"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/backstrap/jquery-mobile"
+    }
+  ],
+  "autoload" : {
+    "classmap" : ["models/classes/", "libraries/LTI", "libraries/Blackboard", "models/interfaces/"] 
+  }
+}

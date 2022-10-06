@@ -1,0 +1,3726 @@
+@charset "utf-8";
+/* CSS Document - for mobile screen. media queries for larger screen overrides */
+
+html, body, .ui-page-theme-a, .ui-page-theme-a .ui-body-inherit, html body .ui-group-theme-b .ui-body-inherit {
+	margin: 0 0 0 0;
+	font-family: 'PT Sans', sans-serif !important;
+	color: #5b5d60;
+	border-color: #5b5c60;
+	text-shadow: none;
+}
+.ui-page-theme-a .ui-bar-inherit {
+	font-family: 'PT Sans', sans-serif !important;
+	text-shadow: none;
+}
+.ui-content { position: relative; }
+.ui-header { max-width: 1230px; }
+.ui-content { max-width: 1200px; padding: 5px 15px; } /* ui-content has a 15px padding */
+
+.ui-page-theme-a a, .ui-page-theme-a a:visited, html body .ui-group-theme-b a {
+	color: #e18b24;
+}
+html body #divCalLists .ui-group-theme-b a {
+	color: #e18b24 !important;
+}
+.ui-page-theme-a a:hover, html body .ui-group-theme-b a:hover {
+	color: #cc6633;
+}
+html body #divCalLists .ui-group-theme-b a:hover {
+	color: #cc6633 !important;
+}
+.heightfix {
+	clear: both;
+	height: 0;	
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Mobile first design */
+
+/*************************************************/
+/* Header Section	                             */
+/*************************************************/
+#divHeader/*, .ui-bar-inherit*/ {
+	color: inherit;
+	border-width: 0;
+}
+#divHeaderLogo {
+	height: 45px;
+	margin: 3px 5px 5px 5px;
+	background: url(../images/waselogo_sm.gif) no-repeat top center;
+}
+
+/* on the login page */
+.loginsection {
+	margin-bottom: 10px;	
+}
+#divHeaderLogo {
+	position: relative;
+}
+.borderdiv_top, .borderdiv_bottom {
+	display: block;
+}
+.borderdiv_top {
+	height: 10px;
+	background-color: #e18b24;
+}
+.borderdiv_bottom {
+	height: 3px;
+	background-color: #5b5d60;
+}
+#divHeaderLogo .release {
+	position: absolute;
+	right: 2px;
+	bottom: 2px;
+	font-style: italic;
+	font-size: 10px;
+}
+
+/* what's new */
+.btnUnAuthBack {
+	margin: 10px;
+	display: inline-block;
+	border-radius: .5em;
+	padding: 10px;
+	background-color: #e18b24;
+}
+.ui-page-theme-a .btnUnAuthBack a {
+	font-size: 14px;
+	font-weight: bold;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/*************************************************/
+/* Menu/Navigation	                             */
+/*************************************************/
+#nav, #usermenu {
+	display: none;
+}
+
+/* Mobile Nav menu */
+#lnkmobilenav {
+	border: 1px solid #5b5d60;
+	border-radius: 50%;
+	margin: 5px;
+	padding: 1px;
+}
+/*#lnkmobilenav.ui-btn { width: 100%; }*/
+li.subtlerow {
+	background-color: #ebebeb;
+}
+.shortdivider.ui-li-divider.ui-bar-inherit, .ui-page-theme-a .shortdivider.ui-li-divider.ui-bar-inherit {
+	height: 0;
+	line-height: 2px;
+	padding: 0;
+	min-height: 2px !important;
+	background: #cc6633 none !important;
+	border-width: 0 !important;
+}
+.ui-panel {
+	width: 14em !important;
+	min-height: 0;
+}
+.ui-panel-display-overlay {
+	box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.25);
+}
+
+/*************************************************/
+/* Footer Section	                             */
+/*************************************************/
+.ui-content {
+	min-height: 220px;
+}
+.ui-footer, .ui-page-theme-a .ui-bar-inherit.ui-footer { 
+	background-color: #5b5d60 !important;
+	color: #ffffff;
+	margin: 10px 0 5px 0; 
+	padding: 10px 0 10px 15px;
+	border-top: 1px solid #5b5d60;
+	border-bottom: 0 solid #5b5d60;
+}
+.footernote {
+	font-size: 10px; 
+	font-weight: normal;
+}
+
+
+/*************************************************/
+/* breadcrumbs - overrides and custom            */
+/*************************************************/
+.rcrumbs {
+	margin: 0 0 0 0;
+	padding: 0 5px 0 7px;
+	border-bottom: 1px solid #5b5d60;
+	font-size: 12px !important;
+	font-weight: normal;
+	font-family: inherit;
+  	color: #cc6633;
+}
+.rcrumbs > ul {
+	margin: 5px 0 5px 0;
+}
+.rcrumbs a {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+
+/*************************************************/
+/* Headings			                             */
+/*************************************************/
+.ui-content h1, #help h1, #prefs h1 { 
+	margin-top: 5px;
+	margin-bottom: 7px;
+	font-size: 20px;
+	color: #cc6633;
+	text-align: left; 
+	border-width: 0;
+}
+h2 {
+	margin-top: 5px; 
+	margin-bottom: 5px; 
+	font-size: 16px;  
+	color: #cc6633;
+}
+#blockinfo h2 {
+	padding-left: 15px;
+}
+
+.section h2 {
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+h3 {
+	margin-top: 5px; 
+	margin-bottom: 5px; 
+	font-size: 14px; 
+	color: #cc6633;
+}
+.calloutsection h3 {
+	color: #ebebeb;
+	margin-top: 8px; 
+	margin-bottom: 8px; 
+}
+h4 {
+	font-size: 13px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: inherit;
+}
+
+hr.dashed {
+	background-color: #fff;
+    border-top: 2px dashed #8c8b8b;
+}
+hr.short {
+    margin-left: 6%;
+}
+.periodsection hr.short, #divPeriodsBottom hr.short {
+	margin-left: 0%;
+}
+#divPeriods, #divPeriodsBottom {
+	margin-left: 8%;
+}
+.periodrecur .removebutton .icontext {
+	display: none;
+}
+@media all and (min-width: 480px) and (min-device-width: 480px) {
+	#divPeriods, #divPeriodsBottom {
+		margin-left: 22%;
+	}
+	.periodrecur .removebutton .icontext {
+		display: inline-block;
+		margin-top: 0.2em;
+		margin-left: 0.25em;
+		text-decoration: underline;
+	}
+}
+.periodsection {
+	position: relative;
+}
+.periodrecur {
+	display: block;
+}
+.removebutton {
+	position: absolute;
+	top: 3px;
+	right: 5px;
+	cursor: pointer;
+}
+#btnAddPeriod {
+	margin-left: 30px;
+    cursor: pointer;
+}
+#btnAddPeriod > *, .periodsection .removebutton > * {
+	float: left;
+}
+#btnAddPeriod .icontext {
+	text-decoration: underline;
+	margin-top: 10px;
+}
+.periodsection .removebutton .icontext {
+    color: #4682b4;
+}
+.removebutton .icontext {
+	margin-left: 10px;
+}
+#btnAddPeriod .ui-icon-plus:after {
+	background-color: green;
+}
+
+#pagetitle.withbuttons {
+	float: left;
+}
+
+
+/*************************************************/
+/* Action Button and Submit Button Sections      */
+/*************************************************/
+/* top button area */
+.actionbuttons {
+	float: right;
+	margin-left: 8px;
+	margin-bottom: 3px;
+	cursor: pointer;
+}
+.actionbuttons .ui-controlgroup {
+	margin: 0;
+}
+
+/* buttons */
+.ui-focus, .ui-btn:focus {
+ -moz-box-shadow: none !important;
+ -webkit-box-shadow: none !important;
+ box-shadow: none !important;
+}
+
+.ui-listview > li > a.ui-btn:hover {
+	background-color: #ebebeb;
+}
+.ui-btn-icon-notext:after {
+	/*background-color: #5b5d60;*/
+	border-radius: 50%;
+}
+.ui-icon-delete.ui-btn-icon-notext:after {
+	background-color: #cc0000;
+}
+/*.ui-icon-lock.ui-btn-icon-notext:after {
+	background-color: #cc0000;
+}*/
+.ui-icon-available.ui-btn-icon-notext:after {
+	background-color: #093;
+}
+html head + body .ui-btn.ui-btn-b, html head + body .ui-btn.ui-btn-b:visited {
+	background-color: #e18b24;
+	border-color: #ebebeb;
+	color: #ffffff;
+	text-shadow: none;
+}
+html head + body .ui-btn.ui-btn-b:focus, html head + body .ui-btn.ui-btn-b:hover {
+	background-color: #cc6633;
+	color: #ffffff;
+	text-shadow: none;
+}
+.ui-controlgroup-controls {
+	border-radius: .5em;
+}
+
+/* do-it-yourself ui-btn-icon-notext so not getting other button markup */
+.iconsonly a.ui-btn {
+	padding: 22px !important;
+	width: auto; /*1.5em !important;*/
+	height: auto;
+}
+.iconsonly a.ui-btn:after {
+	left: 50%;
+	margin-left: -11px;	
+	top: 50%;
+	margin-top: -11px;
+}
+.iconsonly .text {
+	display: none;
+}
+
+
+/* submit buttons */
+.actionbuttons .localnav, .actionbuttons .submitbuttons {
+    float: right;
+}
+#pagetitle.withbuttons + .actionbuttons {
+	padding-top: 5px;
+}
+#pagetitle.withbuttons + .actionbuttons .localnav {
+    margin-top: 3px;
+}
+.actionbuttons .submitbuttons {
+    margin-left: 10px;
+}
+.submitbuttons .ui-field-contain {
+	padding: 0;
+}
+.submitbuttons:not(.buttonspopup) .ui-field-contain {
+    float: right;
+}
+.submitbuttons.bottombuttons {
+    border-top: 2px solid #5b5d60;
+    padding-top: 14px;
+}
+.submitbuttons .ui-input-btn, .submitbuttons .ui-btn {
+    float: left;
+	margin-left: 12px;
+	margin-right: 0;
+	margin-top: 0;
+}
+.actionbuttons .ui-btn {
+	margin-bottom: 0.5em;
+}
+
+/* buttons on popups */
+.submitbuttons.buttonspopup {
+    border-top: 2px solid #5b5d60;
+    padding-top: 7px;
+	text-align: center;
+}
+.submitbuttons.buttonspopup div.ui-input-btn {
+    width: 80px !important;
+}
+.submitbuttons.buttonspopup div.ui-input-btn:not(:first-child) {
+    margin-left: 10px;
+}
+.submitbuttons.buttonspopup .popupbutton {
+	margin: 0 auto;
+	display: inline-block;
+}
+#popupUnsavedManMem .submitbuttons.buttonspopup div.ui-input-btn {
+	width: 90px !important;
+}
+
+@media all and (min-width: 480px) and (min-device-width: 480px) {
+	.submitbuttons div.ui-input-btn {
+	    width: 90px;
+	}
+}
+@media all and (min-width: 768px) and (min-device-width: 768px) {
+    .submitbuttons div.ui-input-btn {
+        width: 150px;
+    }
+}
+
+#cancelbutton {
+    background-color: #CC0000;
+}
+
+
+
+
+/*************************************************/
+/* Info/Error Messages                           */
+/*************************************************/
+#divMessage {
+	position: relative;
+	display: block;
+	/*text-align: left;*/
+}
+.message { 
+	font-size: 14px; 
+	font-weight: bold;
+	margin: 8px 0 5px 0;
+	padding: 5px 2px 5px 30px;
+	/*width: 100%;*/
+	background: no-repeat 5px 5px;
+}
+.error {
+	color: #CC0000;
+	border: solid #CC0000 1px;
+	background: #FFEAF0 url("../images/error.gif") no-repeat 5px 5px;
+}
+.confirm {
+	color: #009900;
+	border: solid #009900 1px;
+	background: #F2FFEC url("../images/confirm.gif") no-repeat 5px 5px;
+}
+.help {
+    color: #2E86C1;
+    border: solid #2E86C1 1px;
+    background: #D6EAF8 url("../images/question_20.png") no-repeat 5px 5px;
+}	
+.error a, .confirm a, .help a {
+	font-size: 11px;
+	text-decoration:underline;
+	font-weight: normal;
+	margin-left:10px;
+}
+.error a {
+	color: #CC0000;
+}
+.confirm a {
+	color: #009900;
+}
+.help a {
+    color: #2E86C1;
+}
+.loadingmsg {
+	display: none;
+	color: #000000;
+	font-weight: bold;
+	font-style: italic;
+	font-size: 20px;
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+	width: 140px;
+	padding: 28px 10px;
+	border: 2px solid #5b5d60;
+	background-color: #e18b24;
+	z-index: 100;
+}
+.nocoursecalmsg, .noinstructorcalmsg {
+	color: #666666;
+	font-size: 12px;
+	font-weight: bold;
+	font-style: italic;
+}
+.nonefoundmsg, .alertmsg {
+	font-size: 14px;
+	font-weight: bold;
+	font-style: italic;
+}
+.nonefoundmsg {
+	color: #cc0000;
+}
+.alertmsg {
+	color: #cc0000;
+}
+.standoutText {
+	font-weight: bold;
+}
+.textdiv {
+	font-size: 0.9em;
+	margin-bottom: 1em;
+}
+
+
+/*************************************************/
+/* Form Layout		                             */
+/*************************************************/
+fieldset {
+	clear: both;
+}
+.ui-shadow-inset {
+	box-shadow: none;
+}
+
+hr {
+	border-width: 0;
+	height: 0;
+	border-top: 2px solid #5b5d60;	
+}
+
+
+/* buttons */
+div.ui-btn.ui-btn-corner-all.ui-btn-up-c, div.ui-btn.ui-btn-corner-all.ui-btn-hover-c, .ui-page-theme-a .ui-btn:not(.ui-collapsible-heading-toggle) {
+	border-radius: .5em;
+	box-shadow: none;
+	border-width: 0;
+	text-shadow: none;
+}
+.ui-page-theme-a .ui-btn {
+	color: inherit;
+}
+.ui-page-theme-a .ui-btn.ui-btn-active {
+	color: inherit;
+	text-shadow: none;
+	border-color: #ffffff;
+}
+.ui-page-theme-a .ui-btn:hover {
+	color: #ffffff;
+}
+div.ui-btn.ui-btn-corner-all.ui-btn-up-c, .ui-page-theme-a .ui-btn {
+	background-color: #e18b24;
+}
+div.ui-btn.ui-btn-corner-all.ui-btn-hover-c, .ui-page-theme-a .ui-btn:hover {
+	background-color: #cc6633;
+}
+div.ui-btn .ui-btn-inner, .ui-page-theme-a .ui-btn:not(.ui-collapsible-heading-toggle), .ui-page-theme-a .ui-btn:not(.ui-collapsible-heading-toggle):hover {
+	color: #ffffff;
+	font-size: 14px !important;
+	text-transform: uppercase;
+}
+.ui-page-theme-a .ui-btn.ui-flipswitch-on:hover {
+	text-transform: none;
+}
+
+.ui-page-theme-a .actionbuttons a.ui-btn, .ui-page-theme-a .actionbuttons a.ui-btn:hover {
+	float: left;
+	text-transform: none;
+	font-size: 12px !important;
+	border-radius: 0;
+}
+.ui-page-theme-a .actionbuttons > a.ui-link {
+	margin-top: 5px;
+	display: inline-block;
+	height: 22px;
+	vertical-align: middle;
+	font-size: 10px;
+}
+.ui-page-theme-a .actionbuttons > a.ui-btn.ui-btn-icon-notext {
+	margin-right: 10px;
+}
+.ui-page-theme-a .actionbuttons a.ui-btn.ui-disabled, .ui-page-theme-a .actionbuttons a.ui-btn.ui-disabled:hover {
+	cursor: default !important;
+}
+.ui-page-theme-a .actionbuttons .ui-controlgroup-controls > a.ui-btn:first-child {
+	border-top-left-radius: 0.5em;
+	border-bottom-left-radius: 0.5em;
+}
+.ui-page-theme-a .actionbuttons .ui-controlgroup-controls > a.ui-btn:last-child {
+	border-top-right-radius: 0.5em;
+	border-bottom-right-radius: 0.5em;
+}
+.ui-page-theme-a .actionbuttons a.ui-btn div.text {
+	margin-left: 10px;
+	text-align: left;
+}
+
+.ui-page-theme-a .ui-btn.btnsave, .ui-page-theme-a .ui-btn.btndelete, .ui-page-theme-a .ui-btn.btnadd {
+    padding: .2em .3em;
+    border-radius: 0;
+    margin-top: 0;
+}
+
+.ui-input-btn input.btn-disabled {
+	background-color: #888888;
+	opacity: .3;
+	cursor: not-allowed;
+}
+
+
+/* override for list dividers/collapsible headings */
+.ui-page-theme-a h3.ui-collapsible-heading {
+	color: #20221d;
+}
+.ui-page-theme-a h3.ui-collapsible-heading .ui-li-count {
+	right: auto;
+	margin-left: 10px;
+	background-color: #eeeeee;
+	border-color: #eeeeee;
+	border-radius: 30%;
+}
+.ui-page-theme-a .ui-btn.ui-collapsible-heading-toggle {
+	background-color: #ebebeb;
+	color: inherit;
+}
+.ui-page-theme-a #divWaitlist .ui-btn.ui-collapsible-heading-toggle, .ui-page-theme-a #divMyApptsContent .ui-btn.ui-collapsible-heading-toggle {
+    background-color: #e18b24;
+}
+.ui-page-theme-a .ui-btn.ui-collapsible-heading-toggle:hover {
+	border-color: #5b5d60;
+	background-color: #ebebeb;
+	color: inherit;
+}
+
+/* links */
+.ui-body-c .ui-link, .ui-bar-a a.ui-link {
+	color: #e18b24;
+}
+.ui-body-c .ui-link:hover, .ui-bar-a a.ui-link:hover {
+	color: #cc6633;
+}
+
+/* select list, checkbox */
+.ui-page-theme-a .ui-select {
+	background-color: #ffffff;
+}
+.ui-page-theme-a .ui-select .ui-btn, .ui-page-theme-a .ui-checkbox .ui-btn, .ui-page-theme-a .ui-radio .ui-btn, .ui-page-theme-a #mobilenav-panel .ui-btn {
+	background-color: inherit;
+	box-shadow: none;
+	border: solid #5b5d60;
+	color: #5b5d60;
+	text-transform: none;
+	text-shadow: none;
+	border-radius: 0;
+}
+.ui-page-theme-a .ui-select .ui-btn, .ui-page-theme-a .ui-checkbox .ui-btn, .ui-page-theme-a .ui-radio label.ui-btn {
+	border-width: 1px;
+}
+.ui-page-theme-a .ui-select .ui-btn {
+	padding: 0.5em;
+}
+.ui-page-theme-a .ui-select .ui-btn:hover, .ui-page-theme-a .ui-checkbox .ui-btn:hover, .ui-page-theme-a .ui-radio .ui-btn:hover, .ui-page-theme-a #mobilenav-panel .ui-btn:hover {
+	background-color: inherit;
+	color: inherit;
+	text-transform: none;
+	border-width: 1px;
+}
+.ui-page-theme-a #mobilenav-panel .ui-btn:hover {
+	border-width: 0;
+	background-color: #5b5d60;
+	color: #ffffff;
+}
+.ui-page-theme-a .ui-checkbox-on:after {
+	background-color: #888888;
+}
+.ui-page-theme-a .ui-radio .ui-btn.ui-radio-on:after {
+	border-color: #888888;
+}
+.ui-checkbox input, .ui-checkbox input:focus, .ui-radio input, .ui-radio input:focus {
+	display: none;
+}
+
+/*flipswitch*/
+.ui-page-theme-a .ui-flipswitch-active, .ui-page-theme-a .ui-slider-track .ui-btn-active {
+	background-color: #e18b24;	
+	border-color: #5b5d60;
+	text-shadow: none;
+}
+.ui-page-theme-a .ui-flipswitch .ui-btn, .ui-page-theme-a .ui-slider-switch .ui-btn.ui-slider-handle {
+	background-color: #cc6633;
+	text-transform: none;	
+}
+
+.ui-field-contain, fieldset.ui-field-contain { padding: .5em 0; margin: 0; border-width: 0 0 0 0; overflow: visible; }
+.ui-content, .ui-input-text, .ui-btn, label.ui-select, label, input.ui-input-text, textarea.ui-input-text, .ui-controlgroup-vertical .ui-controlgroup-label, .ui-controlgroup-vertical .ui-radio .ui-btn, .ui-controlgroup-vertical .ui-checkbox .ui-btn, label.ui-slider { font-size: 14px !important; }
+.ui-collapsible-content { border-left-width: 0 !important; border-right-width: 0 !important; }
+.textonlyfield label { margin-top: 0 !important; }
+/* un-bold default bold fields */
+.ui-btn.ui-checkbox-on, .ui-btn.ui-checkbox-off, .ui-select .ui-btn, .ui-radio label.ui-btn { font-weight: normal !important; }
+
+.ui-field-contain.fullwidthcontrols .horizontalradio .ui-controlgroup-controls {
+	width: 100% !important;
+}
+.ui-field-contain.labelontop > label, .ui-field-contain.labelontop > legend {
+	display: block;
+	float: none !important;
+	margin-bottom: 5px;
+	width: 100% !important;
+	text-align: left !important;
+}
+.ui-field-contain.labelontop > label ~ [class*="ui-"] {
+	width: 100% !important;
+}
+
+hr.smalldivider { border-top: 1px solid #5b5d60; width: 98%; }
+
+.hidden { display: none !important; }
+.hidden-accessible {
+	position: absolute;
+	left: -9999px;
+}
+.borderbottom { border-bottom: 1px solid #5b5d60; }
+.marginall { margin: 5px 5px 5px 5px; }
+.margintop { margin-top: 15px; }
+div.inline { display: inline; }
+
+.section { 
+	position: relative;
+	border-bottom: 2px solid #5b5d60; 
+	padding: 5px 5px 25px 5px; 
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+.section:last-child {
+	border-bottom-width: 0;
+}
+.calloutsection {
+	position: relative;
+	background-color: #5b5d60;
+	padding: 8px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: #ebebeb;
+}
+.recurfield.calloutsection {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.calloutsection.disabled, .recurfield.calloutsection {
+	background-color: #888888;
+}
+.calloutsection .ui-select {
+	color: #5b5d60;
+}
+.ui-page-theme-a .calloutsection .ui-checkbox .ui-btn, .ui-page-theme-a .calloutsection .ui-select .ui-btn {
+	color: inherit;
+}
+
+
+/*************************************************/
+/* Appts, Blocks, Calendars forms				 */
+/*************************************************/
+/*collapsible headings for sections */
+/*#blockinfo .ui-collapsible-heading .ui-btn, #calinfo .ui-collapsible-heading .ui-btn, #apptinfo .ui-collapsible-heading .ui-btn {
+	border: 0;
+	padding-left: 0;
+	color: #2489CE;
+	font-size: 14px;
+	font-weight: bold;
+}
+#blockinfo .ui-collapsible-heading .ui-btn {
+	padding-left: 3px;
+}*/
+#divDefBlockSettings, #divDefAR, #divCollapseMgrMem, #divCollapseWaitlist, #divCollapseLabels {
+	border: 1px solid #5b5d60;
+}
+@media all and (min-width: 768px) and (min-device-width: 768px) {
+	#divCollapseLabels .ui-field-contain > label {
+	    width: 30%;
+	}
+	#divCollapseLabels .ui-field-contain > div.ui-input-text {
+		width: 68%;
+	}
+}
+
+/* form fields */
+.horizontalradio .ui-radio {
+	float: left !important;
+	clear: none;
+	background-color: inherit;
+}
+.horizontalradio .ui-radio label, .verticalradio .ui-radio label {
+	border: 0 solid #000000 !important;
+}
+.verticalradio .ui-radio, .verticalradio .ui-radio label {
+	float: left;
+}
+.verticalradio .ui-controlgroup-controls > div.ui-radio {
+	clear: both;
+}
+
+.datetimebox div.ui-input-text {
+	width: 100px !important;
+	margin-right: 10px;
+}
+.timebox {
+	clear: none !important;
+}
+.timebox label {
+	font-size: 10px;
+}
+.timebox div.ui-input-text {
+	width: 35px !important;	
+	text-align: center;
+}
+.timebox {
+	float: left;
+	display: inline-block;
+}
+.smallintbox div.ui-input-text {
+	width: 50px !important;
+	/*margin-right: 10px;*/
+}
+.smallintbox .ui-controlgroup-controls {
+	margin-right: 10px;
+}
+/*.smallintbox div.ui-select {
+	width: 75px !important;
+	margin-right: 10px;
+}*/
+.selectboxlarge div.ui-select {
+	/*width: 500px;*/
+	white-space:nowrap;
+}
+.selectboxmedium div.ui-select {
+	width: 170px !important;
+	margin-right: 10px;
+}
+.selectboxsmall div.ui-select {
+	width: 90px !important;
+	margin-right: 10px;
+}
+/*.datetimebox > .duration .lineupdiv div.ui-input-text {*/
+.duration div.ui-input-text {
+    width: 200px !important;
+}
+
+
+/* labels and alignment */
+.labeltext {
+	width: 150px !important;
+	background-color: red;
+}
+.labelextra {
+	margin-left: 20px;
+}
+.lineuptext {
+	display: inline-block !important;
+}
+.textByLabel {
+	padding-top: 7px;
+}
+.lineuptext .ui-input-text {
+	display: inline-block !important;
+	margin-top: 7px;
+}
+.lineuptext .sidetextleft, .lineuptext .sidetextright {
+	display: inline-block !important;	
+	font-size: 12px;
+	height: 2.3em;
+}
+.lineuptext .sidetextleft {
+	padding-right: 5px;
+	padding-left: 0;
+}
+.lineuptext .sidetextright {
+	padding-right: 0;
+	padding-left: 0 !important;
+	margin-left: 0 !important;
+}
+.inlineFields.duration, .deadlinedate {
+	display: inline-block;
+	padding-left: 0;	
+}
+.inlineFields.duration {
+	margin-top: 0 !important;
+}
+.inlineFields.duration .ui-input-text, .deadlinedate .ui-input-text {
+	margin-top: 0 !important;
+	float: left !important;
+}
+
+/* Access Restrictions */
+.restrictedsection {
+	margin: 10px 0 10px 20px;
+	padding: 8px;
+	min-width: 200px;
+	max-width: 240px;
+	border: 1px solid #5b5d60;
+	background-color: #ebebeb;
+}
+#blockinfo .restrictedsection h2 {
+	padding-left: 0;
+}
+/* horizontal radio choices */
+.restrictedSearch .ui-controlgroup-horizontal .ui-controlgroup-controls {
+	width: auto;
+	margin: 0 5px;
+}
+.restrictedSearch .ui-controlgroup-horizontal div.ui-radio .ui-btn {
+	font-weight: bold !important;
+    border-width: 1px 0 1px 1px;
+	border-radius: 0;
+}
+.restrictedSearch .ui-controlgroup-horizontal div.ui-radio .ui-btn.ui-first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.restrictedSearch .ui-controlgroup-horizontal div.ui-radio .ui-btn.ui-last-child {
+    border-right-width: 1px;
+	border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.restrictedSearch .ui-controlgroup-horizontal div.ui-radio .ui-btn.ui-btn-active {
+	color: #ffffff;
+	background-color: #e18b24;
+	border-color: #cc6633;
+}
+.restrictedSearch .ui-controlgroup-horizontal div.ui-radio .ui-btn:not(.ui-btn-active):hover {
+    background-color: #ffffff;
+}
+.restrictedSearch .instructions {
+	font-size: 14px;
+	font-weight: bold;
+	margin-top: 8px;
+}
+.restrictedSearch .ui-input-search {
+	float: left;
+	width: 216px;
+}
+.restrictedSearch .goButton.ui-btn {
+	margin: 0 0 0 8px;
+}
+.resultList {
+    max-height: 200px;
+	overflow-y: scroll;
+}
+.restrictedadd {
+	float: right;
+	margin-top: 3px;
+}
+.noneselected {
+	text-align: center;
+	font-style: italic;
+	color: #e18b24;
+}
+.authsection {
+	display: none;
+}
+.authsection.visible {
+	display: block !important;
+}
+.authsection p {
+    text-align: center;
+	font-weight: bold;
+	margin: 10px 0;
+}
+.authsection.visible:last-child p {
+	display: none;
+}
+.authlist {
+	clear: both;
+	padding: 2px 0;
+}
+.authitem {
+	border: 0 solid #5b5d60;
+	border-bottom-width: 1px;
+	padding: 6px 6px 9px 6px;
+}
+.authitem .colDelete {
+	display: none;
+}
+.authitem .colAdd {
+    display: block;
+}
+.authitem:first-child {
+	border-top: 1px solid #5b5d60;
+}
+.authitem.authorized {
+	background-color: #ffffff;
+	font-weight: bold;
+}
+.authitem.authorized .colDelete {
+	display: block;
+}
+.authitem.authorized .colAdd {
+    display: none;
+}
+.colDelete, .colAdd {
+	float: right;
+}
+.colAdd {
+    margin-top: -1px;
+}
+.colDelete {
+    margin-top: -5px;
+}
+.restrictedValues .authlist {
+	border: 2px solid #5b5d60;
+	padding: 0 3px 3px;
+    margin-bottom: 15px;
+	background-color: #ffffff;
+	border-radius: 5px;
+}
+.restrictedValues .authitem {
+    border-top: 1px solid #5b5d60;
+	border-bottom: 0 solid #5b5d60;
+}
+
+
+/*************************************************/
+/* Calendars, Blocks, Appointments				 */
+/*************************************************/
+/* Calendars */
+.calowner, .daytype {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: normal;
+}
+h2 .calowner {
+	color: #5b5d60;
+}
+.caldesc {
+	font-size: 12px;
+	font-style: normal;
+}
+.pendingmgrmem, a.pendingmgrmem {
+	font-style: italic;
+}
+a.pendingmgrmem {
+	text-decoration: underline;
+}
+
+
+/* Slots and Appointments */
+
+/* slots */
+/* blockslots: Make Appt, : View Cal */
+.ui-page-theme-a .blockslots .ui-bar-inherit.ui-li-divider, .ui-page-theme-a .blockslots .ui-li-divider {
+    background-color: #ebebeb !important;
+    box-shadow: none;
+    color: #5b5d60 !important;
+    text-transform: none;
+    text-shadow: none;
+    border-radius: 0;
+    cursor: default;
+}
+.ui-page-theme-a .blockslots .ui-bar-inherit.ui-li-divider, .ui-page-theme-a .blockslots .ui-li-divider {
+	border: 1px solid #5b5d60;
+	border-bottom-width: 0;
+}
+
+.blockslots .ui-listview {
+    box-shadow: none !important;
+}
+.blockslots .ui-listview > .ui-li-divider {
+    width: 95%;
+    display: inline-block;
+    vertical-align: top;
+}
+.blockslots .ui-listview > .ui-li-divider.locked {
+    background-color: #eeeeee !important;
+    font-style: italic;
+    opacity: 0.7;
+}
+.blockslots .ui-listview > .ui-li-divider.locked .lockedmsg {
+    float: right;
+    margin-right: 5px;
+}
+.blockslots .ui-listview > .ui-li-divider.ui-last-child {
+    border-bottom-width: 1px !important;
+}
+
+.slottimes {
+    width: 240px;
+}
+@media all and (min-width: 768px) and (min-device-width: 768px) {
+	.slottimes {
+	    float: left;
+	}
+}
+
+.ui-page-theme-a .blockslots .ui-btn-icon-notext:hover:after {
+    background-color: rgba(0,0,0,0.9);
+}
+.ui-page-theme-a .blockslots .ui-btn:hover .apptwitheach {
+    color: #e18b24;
+}
+.ui-page-theme-a .blockslots .ui-btn.ui-icon-carat-r {
+    background-color: #5b5d60;
+    color: #ebebeb;
+}
+.blockslots li .ui-icon-plus, .blockslots li .ui-icon-minus {
+    float: right;
+}
+
+
+
+.blockslot {
+	font-size: 12px;
+}
+.highlightappt {
+	background-color: #e18b24;
+	color: #ebebeb;
+}
+.pastCanDeadline .apptwitheach, .pastMsg {
+	background-color: pink;
+	color: #5b5d60;
+}
+.deadlinetext .pastMsg {
+	text-align: center;
+	padding-left: 0;
+	font-size: 11px;
+}
+.pastMsg {
+	font-style: italic;
+	line-height: 1em;
+	padding-left: 3px;
+	padding-bottom: 3px;
+}
+.appttime, .apptwith, .apptphone, .apptemail, .apptloc, .apptblktitle {
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	display: inline-block;
+	white-space: normal;
+}
+
+.makeapptwith {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    white-space: normal;
+	max-width: 320px;
+	border: 0 solid #aaaaaa;
+	border-top-width: 1px;
+	background-color: #ffffff;
+	margin-top: 3px;
+}
+@media all and (min-width: 480px) and (min-device-width: 480px) {
+    .makeapptwith {
+    	border: 0;
+        margin-left: 2em;
+    }
+}
+@media all and (min-width: 768px) and (min-device-width: 768px) {
+	.makeapptwith {
+		display: inline-block;
+	    width: 100%;
+	    max-width: 20em !important;
+        background-color: inherit;
+		margin-top: 0;
+	}
+}
+
+.apptsummary {
+	line-height: 1.3em;
+    font-weight: normal;
+    background-color: #ebebeb;
+}
+
+.apptwitheach {
+    display: block;
+	border-bottom: 1px solid #cccccc;
+	line-height: 1.3em;
+    font-size: 13px;
+    font-weight: bold;
+	padding: 5px 2px 3px;
+	margin-bottom: 0;
+}
+.apptname {
+    width: auto;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    float: left;
+    display: inline-block;
+}
+
+.apptwitheach .apptcontrols {
+	float: right;
+}
+
+
+
+.deletedappt {
+	background-color:#F2FFEC !important;
+    border: solid #009900 1px;
+	padding: 3px 5px;
+}
+.deletedappt .apptname {
+	font-weight: normal;
+	font-style: italic;
+	padding-top: 2px;
+	color: #5b5d60 !important;
+}
+.deletedappt .apptcontrols {
+	margin-top: 0;
+    color: #5b5d60 !important;
+}
+.deletedappt .apptcontrols .btnCloseDeleted {
+	margin-left: 15px;
+	padding: 0 4px 2px;
+	font-weight: normal;
+	font-size: 18px;
+	border: 1px solid #aaaaaa;
+	cursor: pointer;
+}
+.deletedappt .apptcontrols .btnCloseDeleted:hover {
+    color: #ffffee;
+	background-color: #aaaaaa;
+}
+.moreapptdata {
+	display: none;	
+}
+.appttime {
+	margin-left: 0;
+	width: 5em;
+}
+.blockslot .appttime {
+	margin-left: 0;
+	width: 5em;
+}
+.slotendtime {
+	display: none;
+}
+.apptwith {
+	/*overflow: hidden;*/
+	max-width: 11em;
+	padding-left: 1em;
+}
+.blockslot .apptwith {
+	padding-left: .5em;
+	padding-right: .5em;
+	max-width: 11em;
+}
+.apptphone {
+	display: none;
+}
+.apptemail {
+	
+}
+.apptloc {
+	display: none;
+	padding-left: 1em;
+	min-width: 9em;
+}
+.apptblktitle {
+	display: none;
+	padding-left: 1em;
+	min-width: 13em;
+}
+
+/* URLS */
+.urlarea {
+	display: inline-block;
+	float: left;
+	margin: 0 0 10px 0;
+	padding: 8px;
+	background-color: #ebebeb;
+	border: 1px solid #5b5d60;
+	white-space: normal !important;
+	word-break: break-all;
+	word-wrap: break-word !important;
+}
+.urltitle {
+	font-size: 12px;
+	font-weight: bold;
+}
+.urlstring {
+	font-size: 12px;
+	color: #e18b24;
+	margin-bottom: 15px;
+	white-space: normal !important;
+	word-break: break-all;
+	word-wrap: break-word !important;
+}
+.cal_urlarea .urlstring, .ical_urlarea .urlstring:last-child {
+	margin-bottom: 0;
+}
+#calinfo .urlarea {
+	margin-bottom: 0;
+}
+.urlstring:hover {
+	cursor: copy;
+	color: #cc6633;
+}
+
+
+/*************************************************/
+/* Waitlist and My appt list                     */
+/*************************************************/
+
+.waitlisttable tbody tr:nth-child(even), .apptlisttable .apptrow:nth-child(even) {
+	border: 0 solid #ebebeb;
+	border-left-width: 1px;
+}
+.waitlisttable tbody tr:nth-child(even) td, .apptlisttable .apptrow:nth-child(even) td {
+    background-color: #ebebeb;
+}
+.waitlisttable tbody tr:nth-child(odd), .apptlisttable .apptrow:nth-child(odd) {
+	border: 1px solid #ebebeb;
+	border-top-width: 0;
+}
+.waitlisttable tbody tr:nth-child(odd) td, .apptlisttable .apptrow:nth-child(odd) td {
+    background-color: #ffffff;
+}
+.waitlisttable tbody, .apptlisttable tbody {
+	border-top: 1px solid #ebebeb;
+}
+.waitlisttable a {
+	font-size: 12px !important;
+}
+.waitlisttable .wlbtns, .apptlisttable .apptbtns {
+	height: 24px;
+}
+.waitlisttable .wlbtns a, .apptlisttable .apptbtns div {
+	float: left;
+	margin: 0 2px;
+}
+.waitlisttable, .apptlisttable {
+	width: 100%;
+}
+.waitlisttable th, .waitlisttable td, .apptlisttable th, .apptlisttable td {
+	padding: 3px 5px 3px 5px;
+}
+.waitlisttable th, .apptlisttable th {
+	background-color: #cc6633;
+	color: #ebebeb;
+	font-weight: bold;
+	text-align: left;
+}
+.waitlisttable tfoot, .apptlisttable tfoot {
+	background-color: #5b5d60;
+	color: #ebebeb;
+	border: 1px solid #ebebeb;
+	border-top-width: 0;
+}
+.wlnonemsg {
+	font-style: italic;
+}
+.addwaiterrow td {
+	vertical-align: bottom;
+}
+
+#divWaitlistEntries {
+	margin-left: 22%;
+	margin-bottom: 15px;
+}
+/* form for adding a new waitlist entry */
+#divWaitlistForm {
+	margin-top: 10px;
+	padding: 10px;
+	background-color: #5b5d60;
+	border: 1px solid #5b5d60;
+	color: #ebebeb;
+}
+#divWaitlistForm .lineuptext {
+	padding-top: 7px;	
+}
+#divWaitlistForm #divAddWLButton div.ui-input-btn {
+	float: right !important;
+}
+.wlmessagearea {
+	margin-top: 8px;
+}
+.apptdividerrow {
+	background-color: #5b5d60;
+	color: #ebebeb;
+	font-weight: bold;
+}
+
+.txtmsgclick {
+	display: inline-block;
+	margin-left: 10px;
+}
+
+
+/*************************************************/
+/* Widgets			                             */
+/*************************************************/
+/* Lists */
+.ui-listview { margin: 5px 0 5px 0; }
+.ui-page-theme-a .ui-bar-inherit.ui-li-divider, .ui-page-theme-a .ui-li-divider {
+	background: #e18b24 none;
+	border: 1px solid #ebebeb;
+	color: #ffffff;
+    font-weight: bold;
+	text-shadow: none;
+	cursor: pointer;
+	line-height: 1.8em;
+}
+.ui-page-theme-a .ui-bar-inherit.ui-li-divider.disp_on, .ui-page-theme-a .ui-bar-inherit.ui-li-divider:hover {
+	background-color: #cc6633;
+	color: #303030;
+}
+.ui-page-theme-a .ui-bar-inherit.ui-li-divider.disp_on {
+	margin-bottom: 10px;
+}
+@media all and (min-width: 768px) and (min-device-width: 768px) {
+	.ui-page-theme-a .ui-bar-inherit.ui-li-divider.disp_on {
+	    margin-bottom: 0;
+	}
+}
+.ui-li, .ui-li-static { white-space: normal !important; }
+
+/* overwrite for make appointment date divider headers */
+.ui-page-theme-a .ui-bar-inherit.ui-li-divider.month-divider, .ui-page-theme-a .ui-li-divider.month-divider {
+	background-color: #5b5d60 !important;
+	border-color: #ebebeb;
+	color: #ebebeb;
+	cursor: default;
+	text-align: center;
+}
+.ui-page-theme-a .ui-bar-inherit.ui-li-divider.month-divider:hover {
+	background-color: #5b5d60 !important;
+}
+
+
+/* Small checkboxes - used mainly for selecting multiple calendars on Calendars and View Calendar pages */
+.checkboxlistitem { 
+	margin: 2px 2px 2px 35px;
+}
+.checkboxlistitem a, .checkboxlistitem a:link, .chedkboxlistitem a:visited { 
+	text-decoration: none;
+}
+.checkboxlistitem .calowner { 
+	margin-left: 5px;
+}
+
+.checkboxlefttop { 
+	float: left; 
+    margin-left: 1px; 
+	margin-right: 20px;
+	width: 20px;
+	height: 100%;
+	text-align: center;
+}
+.checkboxlefttop input { 
+	width: 20px;
+	height: 20px;
+}
+.checkboxlefttop input { 
+    margin-top: 1px;
+}
+
+/* mobiscroll scroller */
+.dw-li {
+	font-size: 16px !important;
+}
+
+/* icons */
+/* icon-only buttons take the background color of the parent */
+.ui-btn-icon-notext.ui-btn { 
+	background-color: inherit !important;
+}
+/* icon-only buttons in lists have no box shadow look */
+.ui-listview > .ui-li-divider > a.ui-btn {
+	border-width: 0 !important;
+}
+img.icon { margin: 5px; }
+.fieldicon { margin: 0 1px 5px 1px; }
+/* custom icons */
+.ui-btn-icon-notext.noborder {
+	border: 0 solid #ffffff;
+	margin: 0 2px 0 2px;
+}
+.noborder.ui-btn:focus {
+	box-shadow: 0 0 0 !important;
+	border: 0 !important;
+}
+.noborder.ui-btn:hover {
+	border: 0 solid #ffffff !important;
+}
+#lblAvailable, span.icontext {
+	display: inline-block;
+	vertical-align: middle;
+}
+.ui-controlgroup-controls .ui-btn-icon-notext.ui-icon-trash {
+	padding: 0.5em 0.9em;
+}
+.restrictedContainer .ui-btn-icon-notext.ui-icon-trash {
+    padding: 0.5em 0.9em;
+    width: 0;
+    height: 18.2px;
+}
+.ui-icon-trash:after {
+	background: #888888 url("../images/trash.png") no-repeat center;
+    background-size: 18px 18px;
+}
+.ui-icon-save:after {
+    background-image: url("../images/save.png");
+	background-size: 20px 17px;
+}
+.ui-icon-available:after {
+    background-image: url("../images/unlocked.png");
+    background-size: 15px 16px;
+}
+.ui-icon-print {
+	width: 26px;
+	height: 26px;
+}
+.ui-icon-print:after {
+    background-image: url("../images/print.png");
+    background-size: 17px 17px;
+	width: 24px;
+	height: 24px;
+}
+
+
+/* spinbox */
+.cgspinbox .ui-controlgroup-controls {
+	width: auto !important;
+}
+.cgspinbox.ui-controlgroup {
+	width: auto !important;
+}
+.cgspinbox.ui-controlgroup .ui-controlgroup-controls .ui-btn {
+	height: 25px;
+}
+/* spinbox - horizontal */
+.cgspinbox.ui-controlgroup-horizontal .ui-controlgroup-controls div {
+	float: left;
+}
+.cgspinbox.ui-controlgroup-horizontal .ui-controlgroup-controls .ui-btn {
+	width: 25px;
+	margin-top: 3px;
+	padding: 3px;
+}
+.cgspinbox.ui-controlgroup-horizontal .ui-controlgroup-controls .ui-input-text {
+	margin-top: 3px;
+}
+/* spinbox - vertical */
+.cgspinbox.ui-controlgroup-vertical .ui-controlgroup-controls .ui-btn {
+	width: 50px; /*100%;*/
+	margin-top: 0;
+	padding: 3px 0 3px 0;
+}
+.cgspinbox.ui-controlgroup-vertical .ui-controlgroup-controls .ui-btn.ui-last-child {
+	border-bottom-width: 0;
+}
+.cgspinbox.ui-controlgroup-horizontal .ui-controlgroup-controls .ui-btn.ui-last-child {
+	border-right-width: 0;
+}
+.cgspinbox.ui-controlgroup-vertical .ui-controlgroup-controls .ui-input-text {
+	margin: 0 !important;
+}
+
+
+
+/*************************************************/
+/* Text				                             */
+/*************************************************/
+.instructions, .coursecalsearch, .popupdetails { font-size: 12px; padding-bottom: 8px; }
+.instructionslarge { font-size: 16px; }
+.instructionsprefs { font-size: 16px; text-decoration: underline; }
+.coursecalsearch { padding-top: 12px; }
+.popupdetails { 
+	background-color: #eeeeee;
+	padding: 8px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+.italic { font-style: italic; }
+.italicsoft { font-style: italic; color: #aaaaaa; }
+.coursecalsearch a { }
+.importantnote { color: #cc0000; }
+label.missing {
+	color: #FF0000;
+	font-weight: bold;
+}
+.required {	
+}
+.required:after, .requiredstyle:after { content:" *"; }
+.clickable { cursor: pointer; }
+.notclickable a { cursor: default; }
+
+div.statustag {
+	display: inline-block;
+	border: 1px solid #5b5d60;
+	padding: 2px 5px;
+	margin-left: 7px;
+}
+div.statustag.pending {
+	background-color: #FFFF66;
+}
+div.statustag.grant {
+    margin-left: 0;
+}
+
+/*************************************************/
+/* Pop-ups							             */
+/*************************************************/
+.ui-popup h3 {
+	margin-top: 10px;
+	padding-right: 36px;	
+}
+.popupinner {
+	padding: 10px; 
+	width: 270px;
+	/*max-width:270px;*/
+}
+.popupinner h2 {
+	height: 25px;
+}
+.popupinner h2 a {
+	float: left;
+}
+.popupbutton {
+	margin: 0 auto;
+	text-align: center;
+}
+.popupbutton .ui-btn {
+	width: 80%;
+	margin: 0 auto;
+}
+
+/*.popupinner .popupbutton .ui-btn {
+	float: right;
+	margin-right: 0;
+	margin-left: 10px;
+}*/
+
+/* time popup */
+#divTimeSelect.popupinner {
+	width: 150px !important;
+}
+#divDateTimeSelect.popupinner {
+	min-width: 150px;
+	width: auto !important;	
+}
+#divDateTimeSelect #divTime fieldset {
+	float: left;
+	/*width: auto;*/
+}
+#divDateTimeSelect #divTime {
+	width: auto;
+	margin: 0 auto;
+}
+
+/* Duration popup */
+#divDeadlineSelect.popupinner {
+	width: 220px !important;
+}
+#divDeadlineSelect.popupinner .ui-field-contain > label {
+	float: left;
+	width: 60px;
+	padding: 3px;
+	margin: 8px 5px 2px 0;
+}
+#divDeadlineSelect .ui-slider {
+	width: 11em;
+	margin: 0 1.2em;
+}
+#deadlineSelection {
+	text-align: center;
+	margin-left: 0 !important;
+	border-top: 1px solid #5b5d60;
+	padding-top: 0.3em;
+}
+#datetimeSection {
+	margin-top: 1em;
+}
+#divDeadlineCal {
+	margin-left: 8px;
+}
+#divDeadlineCal .keybutton {
+	display: none !important;
+}
+#divDeadlineCal .todaybutton {
+	margin-right: 5px;
+}
+
+/* Cancel popup */
+#divCancel {
+	background-color: #ebebeb;
+	border: 1px solid #CC0000;
+	padding: 0 8px 8px 8px;
+}
+#divCancel h2 {
+	color: #CC0000;
+}
+#divCancel div.ui-checkbox .ui-btn {
+	background-color: #FFEAF0;
+	border-width: 0 !important;
+}
+
+/* sync popup */
+#divSyncConfirm.popupinner {
+	width: 300px !important;
+}
+.synccount {
+	font-style: italic;
+	font-size: 12px;
+}
+
+/* help, prefs popup */
+#divHelp.popupinner, #divPrefs.popupinner {
+	height: 300px;
+    overflow-y: auto;
+}
+#preferences_main > .ui-content > #divPrefs.popupinner, #help_main > .ui-content > #divHelp.popupinner {
+	height: auto;
+	width: auto;
+	overflow: hidden;
+	max-width: 100%;
+}
+@media all and (min-width: 768px) and (min-device-width: 768px) {
+    #divHelp.popupinner, #divPrefs.popupinner {
+	    width: 780px;
+	    height: 500px;
+	}
+}
+
+/* confirm waitlist popup */
+#popupConfirmWaitlist {
+    background-color: #ebebeb;
+    border: 1px solid #aaaaaa;
+    padding: 3px 8px 8px 8px;
+}
+#popupConfirmWaitlist .buttonarea div {
+    width: 36%;
+}
+
+
+/* date popup - named dates */
+#divNamedDates {
+	margin-top: 10px;
+}
+.nameddate {
+	cursor: pointer;
+	padding: 3px 8px;
+	margin: 10px;
+	border: 1px solid #aaaaaa;
+}
+.nameddate:hover {
+    background-color: #e18b24;
+	color: #f8f8f8;
+}
+
+/* apply popup */
+#divApply.popupinner {
+    width: 650px !important;
+	max-height: 470px;
+}
+#divApplyResults {
+	position: relative;
+	overflow-y: scroll;
+	max-height: 170px;
+}
+
+/* propagate popup */
+#divPropagate.popupinner {
+    width: 430px !important;
+}
+#divPropagate .msg {
+	padding-bottom: 12px;
+	font-size: 14px;
+}
+#divPropagate .submitbuttons.buttonspopup div.ui-input-btn {
+	width: 100px !important;
+}
+
+/*************************************************/
+/* Styles for each page                          */
+/*************************************************/
+/*************************************************/
+/* Log In                                        */
+/*************************************************/
+#divLogInInfo {
+	clear: both;	
+}
+#divLogInHelp h2:first-child {
+	float: left;
+}
+#helpprivacy {
+	float: left;
+	padding-left: 8px;
+}
+#divLogInHelp h2:last-child {
+	float: right;
+}
+#divLogInHelp {
+	padding: 0;
+}
+#divLogInHelp a {
+	color: #e18b24;
+	text-decoration: underline;
+}
+#divLogInHelp a:hover {
+	color: #cc6633;
+	text-decoration: underline;
+}
+
+#divDidYouKnow {
+	display: none;
+}
+
+
+
+/*************************************************/
+/* What's New                                    */
+/*************************************************/
+#divWhatsNewArea {
+	padding: 0 10px 10px 10px;
+}
+#divWhatsNewArea p {
+	font-size:12px;
+	margin-top: 0;
+	margin-bottom:20px;
+}
+
+
+/*************************************************/
+/* Make Appointment                              */
+/*************************************************/
+/* search */
+#goSearch {
+	display: none;
+}
+/* calendar display */
+.divCalendars {
+	margin-left: 0;
+}
+.calsection .ui-page-theme-a .ui-btn.ui-btn-active {
+	color: #20221d;
+	background-color: #ebebeb;
+	text-shadow: none;
+}
+.divCalendars h3 .ui-btn, #divApptFilter h3 .ui-btn {
+	white-space: normal;
+}
+/* calendar display - fields */
+.calendartitle {
+	font-weight: bold;
+}
+.collapsible-owner, .collapsible-desc {
+	font-size: 12px; 
+	font-weight: normal;
+}
+.collapsible-desc {
+	font-style: italic;
+}
+/* all the stuff displayed within the calendar collapsible */
+.caltext {
+	position: relative;
+}
+.blockssection {
+	padding: 5px 0 0 3px;
+	margin: 10px 10px 10px 0;
+}
+#ulBlocks .expandable .ui-icon-carat-r, #ulBlocks .expandable .ui-icon-carat-d {
+	float: left;
+}
+#ulBlocks .lidate {
+	padding: 0 10px 0 10px;
+	border: 0 solid #ffffff;
+	margin: 0;
+	height: auto;
+}
+/* block display - fields */
+.blksection {
+	padding: 8px;
+	border-bottom: 1px solid #cc6633;
+}
+.blksection:last-child {
+	border-bottom-width: 0;	
+}
+.blksection.locked {
+    background-color: #eeeeee !important;
+    font-style: italic;
+    opacity: 0.7;
+}
+.blksection.locked h2 {
+    color: #666666 !important;
+}
+.blksection.locked .lockedmsg {
+    float: right;
+    font-weight: bold;
+    padding-left: 23px;
+	padding-right: 20px;
+}
+.blksection.locked .lockedmsg a {
+	margin-right: 5px;
+	margin-top: 3px;
+	cursor: default;
+}
+.blksection .blockmakeaccess {
+    float: right;
+    padding-left: 10px;
+    padding-right: 10px;
+	font-size: 14px;
+}
+.blksection ul {
+	margin: -5px -8px -8px -8px;
+}
+.blktitle {
+	font-weight: bold;
+}
+#divBlockDisplay {
+	width: 100%;
+	margin-left: 5px;
+}
+.blockdesc, .blocklocation, .caltitle, .deadlines, .blockowner, .calblockowner, .recurtext {
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+}
+.blockowner, .calblockowner {
+	font-weight: bold;
+}
+.calblockowner {
+	text-align: center;
+}
+.blocklocation {
+	display: none;
+}
+.caltitle {
+	font-style: italic;
+}
+.caltitle:before { content: "Calendar: "; }
+.maxappts {
+	font-size: 11px;
+	font-style: italic;
+	margin-right: 10px;
+}
+.deadlines {
+	position: relative;
+	float: right;
+	margin-right: 15px;
+	padding: 10px 15px 10px 35px;
+	border: 1px solid #000000;
+}
+.tdday .deadlines {
+	float: none;
+	font-size: 11px;
+	margin-right: 0;
+}
+.blksection .deadlines, #apptinfo .deadlines {
+	float: left;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+.iconWrapper {
+	top: 10px;
+	left: 15px;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+}
+#divViewCalContent .blocklocation {
+	display: inline-block !important;
+	float: none !important;
+}
+
+
+
+
+/* courses */
+.course {
+	margin-bottom: 5px;
+}
+.courseinfo { 
+	margin: 10px 0 5px 0;
+	padding: 8px 10px;
+	font-weight: bold;
+	font-style: normal;
+	background-color: #5b5d60;
+	color: #ffffff;
+}
+.coursetitle { display: none; }
+
+ul.instructorlist {
+	list-style: none outside none;
+	padding-left: 15px;
+}
+li.instructor { 
+	padding: 5px;
+	border: 1px solid #ebebeb;
+	margin-bottom: 10px;
+}
+.instructorname { }
+
+
+/*************************************************/
+/* My Appointments                               */
+/*************************************************/
+#divApptFilter .ui-collapsible-content {
+	padding: 7px;
+	background-color: #eeeeee;
+}
+.filtercol1, .filtercol2, .filtercol3 { 
+	float: left !important;
+	display: inline-block !important;
+	clear: none !important;
+	vertical-align: middle;
+}
+.filtergroup.ui-field-contain {
+	margin: 3px 0 3px 0;
+	height: 30px;
+}
+.filtergroup.ui-field-contain div.ui-input-text, .filtergroup.ui-field-contain div.ui-select, .filtergroup.ui-field-contain label, .filtergroup.ui-field-contain .clrbutton {
+	float:left;
+	margin: 3px 3px 3px 3px;
+	height: 100% !important;
+	display: inline-block;
+}
+.filtergroup.ui-field-contain label {
+	width: 95px !important;
+	line-height: 30px;
+	vertical-align: middle !important;
+}
+.filtergroup.ui-field-contain div.ui-input-text, .filtergroup.ui-field-contain.datetimefilter div.ui-input-text, .filtergroup.ui-field-contain.datetimefilter div.ui-select {
+	width: 130px !important;
+}
+
+.filterlabel {
+	text-align: right;
+	font-weight: bold;
+}
+
+a.clrbutton, a.clrbutton:link, a.clrbutton:active, a.clrbutton:visited {
+	width: 30px;
+	padding-top: 7px;
+	line-height: 30px;
+	vertical-align: middle;
+	font-size: 14px;
+	text-decoration: underline;
+	color: #CC0000;
+	display: inline-block;
+}
+a.clrbutton:hover { color: #CC0000; }
+
+.filtergobutton {
+	clear: both;
+}
+.filtergobutton .ui-btn {
+	float: right;
+	margin-right: 10px;
+}
+
+
+#divFilters { position: relative; }
+#divFilterDesc {
+	font-size: 12px;
+	margin-top: 10px;
+	margin-left: 10px;
+	font-weight: bold;
+}
+.filter {
+	font-size: 12px;
+	color: #2489CE;
+	margin: 8px;
+	text-decoration: underline;
+	display: inline;
+}
+
+/*#divApptMsg { display: none; font-weight: bold; font-style: italic; text-align: center; float: right; width: 100%; position: absolute; }*/
+
+#divMyApptsContent {
+	margin-top: 30px;
+	height: 100%;
+}
+#divApptList {
+	margin: 30px 15px 10px 15px;
+	padding-top: 0;
+	position:relative;
+}
+
+#listappts #divWaitlist {
+	margin-top: 50px;
+}
+#divCalendars #divWaitlist {
+	margin-top: 20px;
+}
+
+/*************************************************/
+/* Appt                                          */
+/*************************************************/
+#cancelConfirm #btnCancel .ui-btn { border: none !important; float: right; }
+#divBlockLocation label { display: none; }
+#divDate label { display: none; }
+
+
+/*************************************************/
+/* Calendars                                     */
+/*************************************************/
+#divCalLists { clear: both; }
+#divCalLists h2 > .calowner {
+	margin-left: 30px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+/* calendar lists */
+.liHeader.ui-li-divider, .ui-page-theme-a .liHeader.ui-bar-inherit.ui-li-divider, .ui-page-theme-a .liHeader.ui-li-divider {
+	height: 17px;
+	background-color: #cc6633 !important;
+	border: 1px solid #ebebeb;
+	line-height: 18px;
+}
+.liHeader { display: none !important; }
+.ui-page-theme-a .ui-li-divider .colhdr {
+	cursor: default;
+}
+#divCalLists .colhdr, .applyresults .colhdr {
+	font-weight: bold !important;
+}
+#divCalLists .col1, #divCalLists .col3, #divCalLists .col4 {
+	width: 100%;
+}
+#divCalLists .col2, #divCalLists .col3, #divCalLists .col4 {
+	font-weight: normal;
+    padding-left: 20px;
+}
+#divCalLists .col1 {
+    padding-bottom: 4px;
+}
+#divCalLists .noshow {
+	display: none;
+}
+#divCalLists .smalltitle {
+	display: inline-block;
+	padding-right: 7px;
+    width: 100px;
+	font-weight: bold;
+}
+#divCalLists li, .applyresults li {
+	border-bottom: none;
+}
+#calendars .ui-listview > .ui-li-static a  {
+	color: #5b5d60 !important;
+}
+#calendars .ui-listview > .ui-li-static:nth-child(odd), .ui-listview > .ui-li-static:nth-child(odd) {
+    background-color: #ebebeb;
+	border-width: 0;
+}
+#calendars .ui-listview > .ui-li-static:nth-child(even), .ui-listview > .ui-li-static:nth-child(even) {
+    background-color: #ffffff;
+	border: 1px solid #ebebeb;
+	border-top-width: 0;
+}
+
+
+/*pending*/
+.lipendingcal {
+	background-color: #FFFF66 !important;	
+}
+
+/* apply section*/
+.applycallist.ui-listview {
+	margin: 0 10px; 
+}
+.applycallist .col1, .applycallist .col2, .applycallist .col3 {
+    display: block;
+    float: left;
+    width: 33%;
+    min-width: 33%;
+}
+.applyresults .calowner, .applyresults .checkboxlistitem {
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.applyresults .checkboxlistitem {
+	font-size: 14px;
+}
+.applyresults li {
+	padding: 5px 8px !important;
+}
+#divApplyResultArea #divEmailText {
+	padding-bottom: 2px !important;
+}
+#divApplyResultArea #divSubmit {
+    padding-top: 0 !important;
+}
+h2.sectionheader {
+	float: left;
+	margin-bottom: 10px;
+}
+.sectionbutton {
+	float: left;
+	margin-top: 4px;
+	margin-left: 20px;
+}
+.clearMe {
+	clear: both;
+}
+.ui-page-theme-a .sectionbutton a.ui-btn, .ui-page-theme-a .sectionbutton a.ui-btn:hover {
+    font-size: 12px !important;
+	text-transform: none;
+	margin: 0;
+}
+
+/*************************************************/
+/* Calendar Settings                             */
+/*************************************************/
+/* managers/members */
+#divManagersAndMembers h2 {
+	margin-bottom: 7px;
+}
+#divManagersAndMembers .instructions {
+    margin-bottom: 10px;
+	/*color: #e18b24;*/
+	font-weight: bold;
+}
+#divManagersAndMembers .colName, #divManagersAndMembers .colStatus, #divManagersAndMembers .colNotify, #divManagersAndMembers .colRemind, #divManagersAndMembers .colBtns {
+}
+#divManagersAndMembers .colName {
+	width: 77%;
+	float: left;
+}
+#divManagersAndMembers .colStatus {
+	clear: both;
+	font-weight: normal;
+}
+#divManagersAndMembers .colNotify:before {
+	content: "Send Notifications? ";
+}
+#divManagersAndMembers .colRemind:before {
+	content: "Send Reminders? ";
+}
+#divManagersAndMembers .colBtns {
+	text-align: left;
+	margin-top: 10px;
+}
+@media all and (min-width: 768px) and (min-device-width: 768px) {
+	#divManagersAndMembers .colBtns {
+	    text-align: right;
+        margin-top: 0;
+	}
+}
+#divManagersAndMembers .colhdr {
+	font-weight: bold !important;
+	text-align: left !important;
+}
+#divManagersAndMembers .colNotify.colhdr, #divManagersAndMembers .colRemind.colhdr {
+	text-align: center !important;
+}
+#divManagersAndMembers p {
+	 margin-top: 3px; margin-bottom: 18px;
+}
+.textmgrmem {
+	margin-top: 3px;
+}
+.mgrmemaction {
+	margin-left: 5px;
+}
+.mgrmemaction a {
+	text-decoration: underline;
+	font-size: 12px !important;
+}
+
+/*************************************************/
+/* Access Restrictions                           */
+/*************************************************/
+.restrictedContainer {
+	margin-left: 22%;
+}
+.restrictedSearch, .restrictedValues {
+	width: 300px;
+	float: left;
+	margin: 10px;
+	padding: 0 8px 8px;
+	border: 1px solid #5b5d60;
+	background-color: #ebebeb;
+}
+
+/*************************************************/
+/* View Calendar                                 */
+/*************************************************/
+#divViewCalContent {
+	clear: both;
+	margin-top: 0;
+}
+/* Calendar Selection Area */
+#divViewCalContent #divCalSelect {
+	margin-right: 0;
+	border: 1px solid #cecece;
+}
+#divViewCalContent #divCalSelect h3 {
+}
+#divViewCalContent .ui-collapsible-content {
+	padding: 5px 10px !important;
+}
+.sidesection {
+	position: relative;
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: 4px;
+	padding: 1px 0 0 0; 
+	overflow: hidden;
+}
+.sidesection h2 {
+	font-size: 12px;
+	color: #cc6633;
+	margin-bottom: 8px;
+	margin-top: 3px;
+}
+.ui-content .sidesection .ui-listview {
+	margin: 0;
+}
+.sidesection .ui-li-static {
+	padding: 0 0 0 0;
+	margin-left: 5px;
+	font-size: 12px !important;
+}
+.sidesection .ui-listview > .ui-li-static {
+	border: 0 !important;
+}
+.sidesection .ui-checkbox {
+	float: left;
+	margin-top: 0 !important;
+	width: 22px !important;
+	height: 22px !important;
+}
+.sidesection .ui-checkbox input {
+	display: inline-block;
+	margin-top: 0 !important;
+    left: 0 !important;
+	top: 0 !important;
+}
+.sidesection .checkboxlistitem {
+	float: left;
+	position: relative;
+	display: inline-block;
+	min-height: 22px;
+	vertical-align: middle;
+	margin: 0 0 0 5px !important;
+	padding: 3px 6px 0 20px;
+	font-size: 12px;
+	max-width: 175px;
+	/*white-space: normal !important;
+	word-break: break-all;
+	word-wrap: break-word !important;*/
+}
+
+.caldispstyle {
+	position: absolute;
+	top: 3px;
+	left: 0;
+	width: 15px;
+	height: 15px;
+	background-color: #cecece;
+	/*margin-right: 5px;
+	margin-top: 3px;*/
+	display: inline-block;
+}
+.calstyle_0 { background-color: #DEF5B0 !important; }
+.calstyle_1 { background-color: #D5E7FA !important; }
+.calstyle_2 { background-color: #DBCDE7 !important; }
+.calstyle_3 { background-color: #F9D9E3 !important; }
+.calstyle_4 { background-color: #C8E5D7 !important; }
+.calstyle_5 { background-color: #BFCAA8 !important; }
+.calstyle_6 { background-color: #AFC5E3 !important; }
+.calstyle_7 { background-color: #D8D6B3 !important; }
+.calstyle_8 { background-color: #F8B5E4 !important; }
+.calstyle_9 { background-color: #C8F5E1 !important; }
+.calstyle_10 { background-color: #FFDDD1 !important; }
+.calstyle_11 { background-color: #E9DACA !important; }
+
+.blocksection.unavailableBlock {
+    background-color: #eeeeee !important;
+	font-style: italic;
+	opacity: 0.7;
+}
+.blocksection.unavailableBlock h2 {
+	color: #666666 !important;
+}
+.blocksection.unavailableBlock .blockcontrols .lockedmsg {
+    float: none;
+	width: 100%;
+	font-weight: bold;
+	padding-left: 23px;
+}
+.blocksection.memberNonOwner {
+	opacity: 0.8;
+}
+.blocksection .blockmakeaccess {
+	float: right;
+	padding: 3px 15px 3px 0;
+}
+
+.showingblockdesc {
+	padding-top: 3px;
+	font-weight: bold;
+	font-style: italic;
+	font-size: 18px;
+	margin-right: 10px;
+	text-align: center;
+	text-decoration: underline;
+}
+.noblocks {
+	margin-top: 10px;
+	color: #CC0000;
+	font-weight: normal;
+}
+
+
+#divBlocks h3:not(:first-child) {
+	margin-top: 30px;
+}
+.blocksection {
+	position: relative;
+	background-color: #eeeeee;
+	padding: 8px;
+	border: 1px solid #000000; 
+}
+.blocksection h2 {
+	margin-top: 2px; 
+}
+.blocksection .urldisplay {
+	display: none;
+}
+
+/* buttons for block/appt actions */
+.blockcontrols, .apptcontrols, .slotcontrols {
+	float: right;
+}
+.blockcontrols a, .apptcontrols a, .blockcontrols div, .apptcontrols div {
+	float: left;
+}
+.apptcontrols {
+	margin-left: 8px;
+	margin-right: 0;
+	padding: 0 0 0 0;
+	margin-top: -4px;
+}
+.apptcontrols .extracontrols {
+	display: none;
+}
+
+.slotlist {
+    position: relative;
+    height: auto;
+    margin: 14px 0 5px 0;
+}
+
+.blockslotrow {
+	background-color: #ffffff;
+	min-height: 14px;
+	border: 1px solid #cccccc;
+	border-bottom-width: 0;
+}
+.blockslotrow.unavailableSlot {
+	font-style: italic;
+	background-color: #eeeeee;
+	opacity: 0.7;
+}
+.blockslotrow:last-child {
+	border-bottom-width: 1px;
+}
+.blockslotrow .blockslot {
+	padding: 6px 4px 6px 10px;
+	min-height: 24px;
+}
+.blockslot:before {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+}
+.blockslotrow .slottime, .blockslotrow .slotapptlist {
+	display: inline-block;
+}
+.blockslotrow .slotapptlist {
+    padding: 4px 4px 0 4px;
+}
+.blockslotrow .slottime {
+	font-weight: bold;
+    vertical-align: top;
+	padding-top: 4px;
+}
+
+.slotcontrols:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.blockcontrols .listbuttonouter, .blockslotrow .listbuttonouter, .apptcontrols .listbuttonouter {
+	float: left;
+	margin-right: 5px;
+}
+.listbuttonouter .ui-btn {
+	margin: 0 !important;	
+	border: 0 !important;
+}
+.listbuttonouter.pastdeadline, #cancelbutton.pastdeadline {
+    opacity: 0.5;
+}
+.listbuttonouter.pastdeadline .ui-icon-delete.ui-btn-icon-notext:after, #cancelbutton.pastdeadline {
+    background-color: #cc0000;
+    cursor: default !important;
+}
+
+.blocksection .slotendtime, .slotendtime {
+	display: none;
+}
+
+.blocksection a.listbutton .ui-shadow {
+	box-shadow: none !important;
+}
+.blocksection a.listbutton .ui-btn-up-b {
+	text-shadow: none;
+}
+
+/* appointments in slots */
+.slotapptlist {
+	/*margin-left: 80px;*/
+	/*display: inline-block;*/
+	background-color: inherit;
+}
+.slotappt {
+	position: relative;
+	/*min-height: 2em;*/
+	vertical-align: top;
+}
+.slotappt:not(:last-child) {
+	padding-bottom: 3px;
+	border-bottom: 1px solid #eaeaea;
+}
+.slotappt:not(:first-child) {
+    padding-top: 6px;
+}
+.slotappt:before {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+}
+.slotappt .apptwith, .slotappt .moreapptdata, .slotappt .apptcontrols{
+    display: inline-block;
+	vertical-align: top;
+}
+.slotapptlist .moreapptdata {
+	display: none;	
+}
+
+
+/*************************************************/
+/* View/Edit Blocks                              */
+/*************************************************/
+/*This lines up the text beside the fields with the field itself*/
+/*#blockinfo #divStart.ui-field-contain input.ui-input-text, 
+#blockinfo #divTimes.ui-field-contain input.ui-input-text, 
+#blockinfo #divEvery.ui-field-contain .ui-select, 
+#blockinfo #divMonthlyAndWeekday.ui-field-contain .ui-select, 
+#blockinfo #divDayOfWeek.ui-field-contain .ui-select, 
+#blockinfo #divDayOfMonth.ui-field-contain .ui-select, 
+#blockinfo #divSlotSize.ui-field-contain input.ui-input-text, 
+#blockinfo #divMaxApptsPerSlot.ui-field-contain input.ui-input-text, 
+#blockinfo #divMaxApptsPerPerson.ui-field-contain input.ui-input-text,
+#blockinfo #divWOM, #blockinfo #divDOW, #blockinfo #divDayOfWeekStartText, #blockinfo #divDayOfWeekEndText {
+	display: inline-block;
+}*/
+
+#blockinfo #divDayTypes .ui-checkbox {
+	width: 125px;
+}
+#blockinfo #cgDivideInto .ui-radio {
+	width: 100px;
+}
+
+#blockinfo .col1, #blockinfo .col2, #blockinfo .col3 {
+	display: block;
+	float: left;
+	margin-right:5px;
+}
+#divLockBlock .ui-btn.ui-checkbox-on.ui-checkbox-on:after, #divLockBlock .ui-btn-icon-left:after {
+	background: none !important;
+}
+#divLockBlock .ui-btn.ui-checkbox-on.ui-checkbox-on, #divLockBlock .ui-btn-icon-left {
+	padding-left: 5px;
+}
+#divLockBlock #lblAvailable, #divLockBlock #lblAvailable:hover {
+	border-width: 0 !important;
+}
+#divLockBlock #lblAvailable.ui-btn {
+	padding: .5em 0;
+}
+#imgLockBlock {
+	float: left;
+	margin-top: -8px !important;
+	margin-bottom: 0 !important;
+	border-width: 0 !important;
+	padding: 0.6em 0.8em !important;
+}
+
+.smallcheckbox .ui-checkbox {
+	width: 250px;
+	border: 0 solid #000000;
+	display: inline-block;
+	font-weight: normal;
+}
+
+#divPeriod .colEvery, #divPeriod .colWeekOfMonth, #divPeriod .colDayOfWeek, #divPeriod .colDayOfMonth {
+	display: block;
+}
+#divPeriod .colWeekOfMonth, #divPeriod .colDayOfWeek, #divPeriod .colDayOfMonth {
+	margin-top: 8px;
+}
+.lineupdiv {
+	display: block;
+	float: left;
+	margin: 0 4px 0 4px;
+}
+.lineupdiv.lineuptext, .lineupdiv.lineuptextright {
+	padding: 8px 6px 9px 6px;
+}
+.lineupdiv.lineuptextright {
+	padding-left: 3px;
+	display: inline-block;
+	float: none !important;
+}
+/*.lineupdiv.lineupselect {
+	margin-right: 10px;
+}
+.lineupdiv .ui-select .ui-btn {
+	padding: 8px 45px 9px 20px;
+}
+*/
+#divPeriod .selectboxlarge div.ui-select {
+	width: 260px;
+	margin-right: 10px;
+}
+#divPeriod .selectboxmedium div.ui-select {
+	width: 140px;
+	margin-right: 10px;
+}
+#divPeriod .selectboxsmall div.ui-select {
+	width: 100px;
+	margin-right: 10px;
+}
+
+.ui-field-contain .mock-ui-input-text {
+	display: block;
+	/*width: 12em;
+	margin: 0 2% 0 0;*/
+}
+.ui-field-contain .mock-ui-input-text .ui-input-text {
+	display: block;
+}
+.mock-ui-input-text .ui-select {
+	width: 12em; /*100%;*/
+	/*margin: 0 0 0.6em;
+	float: right;*/
+}
+.mock-ui-input-text .ui-select .ui-btn {
+	/*margin-top: 0;*/
+	padding: 6px 40px 6px 20px;
+}
+.ui-collapsible-themed-content .ui-collapsible-content {
+	border-bottom: 0;
+}
+
+.inlineFields {
+	float: left;
+	position: relative;
+}
+.inlineFields > div {
+	float: left;
+}
+
+
+/*************************************************/
+/* Help				                             */
+/*************************************************/
+.helpInstructions {
+    margin: 0 20px 5px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #5b5d60;
+    background-color: #edba7e;
+    font-size: 16px;
+}
+.helparea {
+	width: auto;
+	padding: 5px 20px 10px 10px;
+}
+.helpsection {
+	display: none;	
+	padding: 10px 20px 10px 5px;
+	padding-right: 30px !important;
+	width: 98%;
+	font-size: 16px;
+	line-height: 16px;
+}
+
+.leftHelp {
+	float:none;
+	height: 150px;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	padding-left: 20px;
+	width: 100%;
+	border: 1px solid #5b5d60;
+}
+div.helplist {
+	display: block;
+	width: 180px;
+	color: inherit;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+}
+div.helplist ul, ul.subhelplist {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+ul.helplist li { margin: 0 0 1px 0; }
+
+ul.helplist a {
+	font-size: 14px;
+	display: block;
+	padding-top:7px;
+	width: 140px;
+	color: #e18b24;
+	text-decoration: none;
+}
+ul.helplist a:hover {
+	color: #cc6633;
+}
+.subhelplist { 
+	width: 140px;
+	margin-top: 5px !important;
+}
+div.helplist ul ul li { 
+	margin: 0 0 1px 0; 
+	width: 100%;
+}
+div.helplist ul ul a {
+	display: block;
+	padding: 0 5px 5px 25px;
+	width: 100%;
+	color: #e18b24;
+	text-decoration: none;
+	word-wrap: normal;
+	white-space: normal;
+}
+div.helplist ul ul a:hover {
+	color: #cc6633;
+}
+/* END Help */
+
+
+/*************************************************/
+/* Prefrences                                    */
+/*************************************************/
+@media all and (min-width: 768px) and (min-device-width: 768px) {
+	#divPrefs #prefinfo > .instructions {
+		padding-bottom: 5px;
+	}
+	#divPrefs .ui-field-contain {
+	    clear: both;
+	}
+	#divPrefs label, #divPrefs .ui-controlgroup-label {
+		float: left;
+		width: 30%;
+		margin: .5em 2% 0 0;
+	}
+	#divPrefs label + div, #divPrefs .ui-controlgroup-label + div {
+	    float: left;
+	    width: 65%;
+	}
+}
+.ui-simpledialog-container {
+	z-index: 1200 !important;
+}
+
+#divPrefs #divTextMsgEmailContents {
+	margin-left: 32%;
+	width: 300px;
+	border: 1px solid #aaaaaa;
+}
+
+
+
+/*@media only screen and (min-device-width: 480px) {*/
+@media all and (min-width: 480px) and (min-device-width: 480px) {
+
+.ui-content {
+	min-height: 400px;
+}
+.ui-footer { 
+	margin-top: 20px;
+}
+
+.ui-field-contain.labelontop > label ~ [class*="ui-"] {
+	width: 100% !important;
+}
+
+/*************************************************/
+/* Calendars, Blocks, Appointments				 */
+/*************************************************/
+/* Slots and Appointments */
+.blockslot .appttime, .appttime {
+	margin-left: 0;
+	width: 10em;
+}
+.apptwith {
+	padding-left: 2em;
+	max-width: 12em;
+}
+.blockslot .apptwith {
+	padding-left: 1.5em;
+	padding-right: 1em;
+	max-width: 12em;
+}
+.apptphone {
+	
+}
+.apptemail {
+	
+}
+.apptloc {
+	padding-left: 1em;
+	width: 10em;
+}
+.apptblktitle {
+	padding-left: 1em;
+	min-width: 13em;
+}
+
+/*************************************************/
+/* Waitlist                                      */
+/*************************************************/
+
+/*************************************************/
+/* Log In                                        */
+/*************************************************/
+#divDirectLogin .ui-btn, #divCASLogin .ui-btn, #divGuestLogin .ui-btn {
+	width: 150px;
+}
+
+/*************************************************/
+/* Make Appointment                              */
+/*************************************************/
+#divSearch .ui-input-search {
+	width: 430px;	
+}
+#goSearch {
+	display: inline-block;
+	margin-left: 5px;
+}
+#goSearch.ui-btn, .goButton.ui-btn {
+	padding: .5em .6em;
+}
+.blocklocation {
+	display: block;
+	/*float: right;*/
+}
+.blocklocation:before { content: 'Location: '; }
+
+
+/*************************************************/
+/* My Appointments                               */
+/*************************************************/
+
+
+/*************************************************/
+/* Appt                                          */
+/*************************************************/
+#divBlockLocation label { display: inline-block; }
+#divDate label { display: inline; }
+
+
+/*************************************************/
+/* Calendars                                     */
+/*************************************************/
+div.applysection .ui-input-search {
+	width: 100%;
+}
+	
+/*************************************************/
+/* Calendar Settings                             */
+/*************************************************/
+
+/*************************************************/
+/* View Calendar                                 */
+/*************************************************/
+.blocksection {
+    margin: 5px -12px 15px -12px;
+}
+.slotapptlist .moreapptdata {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+
+/*************************************************/
+/* View/Edit Blocks                              */
+/*************************************************/
+.ui-field-contain .mock-ui-input-text {
+	/*display: inline-block;*/
+	float: left;
+	/*width: 12em;*/
+	margin: 0 2% 0 0;
+}
+.ui-field-contain .mock-ui-input-text .ui-input-text {
+	float: left;
+}
+.mock-ui-input-text .ui-select {
+	width: 12em; /*100%;*/
+	margin: 0 0 0.6em;
+	float: right;
+}
+.mock-ui-input-text .ui-select .ui-btn {
+	margin-top: 0;
+	padding: 6px 40px 6px 20px;
+}
+.mock-ui-input-text {
+	text-align: right;
+	/*width: 8em;*/
+}
+.mock-ui-input-text .ui-select {
+	max-width: 12em;
+}
+
+
+}  /* END 480px */
+
+
+
+
+/*@media only screen and (min-device-width: 768px) {*/
+@media all and (min-width: 768px) and (min-device-width: 768px) {
+
+.ui-content { margin-top: 0; }
+
+/*************************************************/
+/* Header Section	                             */
+/*************************************************/
+#divHeader {
+	border-width: 0;
+}
+#divHeaderLogo {
+	height: 110px;
+	background: url(../images/waselogo.gif) top left no-repeat;
+	margin: 0;
+}
+.borderdiv_top, .borderdiv_bottom {
+	display: none;
+}
+.nonav .borderdiv_top, .nonav .borderdiv_bottom {
+	display: block;
+}
+#divHeaderLogo .release {
+	font-size: 12px;
+	right: 10px;
+	bottom: 10px;
+}
+#mobilenav {
+	display: none;
+}
+#lnkmobilenav, #lnkactions {
+	display: none;
+}
+
+/*************************************************/
+/* Menu/Navigation	                             */
+/*************************************************/
+#nav {
+	display: block;
+	border-bottom: 15px solid #5b5d60;
+	background-color: #e18b24;
+}
+#nav #menu {
+	width: intrinsic;           /* Safari/WebKit uses a non-standard name */
+  	width: -moz-max-content;    /* Firefox/Gecko */
+  	width: -webkit-max-content; /* Chrome */
+	margin: 0 auto;
+	height: 36px;
+}
+#nav #menu ul {
+	width: 100%;
+	height: auto;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+#nav #menu li.mainnav { 
+	float: left;
+	height: 100%;
+	/*display: inline;*/
+	text-align: center;
+}
+#nav #menu li.mainnav, #nav #menu li.mainnav a { 
+	min-width: 100px;
+}
+#nav #menu li.mainnav a:link, #nav #menu li.mainnav a:visited, #nav #menu li.mainnav a:hover, #nav #menu li.mainnav a:active { 
+display: inline-block;
+	padding: 10px;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: bold;
+	color: #ffffff;
+	text-decoration: none;
+}
+#nav #menu li.mainnav:hover, #nav #menu li.mainnav a:hover, #nav #menu li.mainnav.menuselected, #nav #menu li.mainnav.menuselected a {
+	background-color: #cc6633;
+}
+
+#usermenu {
+	display: block;
+	float: right;
+	position: relative;
+	z-index: 10;
+	padding: 5px;
+	margin: 5px 10px;
+	font-size: 14px;
+	font-weight: bold;
+}
+#usermenu a {
+	font-weight: bold;
+	font-size: 11px;
+}
+
+/*************************************************/
+/* breadcrumbs - overrides and custom            */
+/*************************************************/
+.rcrumbs {
+	/*border-bottom: 1px solid #5b5d60;*/
+}
+
+/*************************************************/
+/* Headings			                             */
+/*************************************************/
+.ui-content h1 { 
+	margin-top: 10px;
+	font-size: 22px;
+}
+
+/*************************************************/
+/* Action Button and Submit Button Sections      */
+/*************************************************/
+.actionbuttons {
+	margin-bottom: 6px !important;
+	margin-left: 10px;
+}
+.ui-page-theme-a .actionbuttons > a.ui-link {
+	font-size: 12px;
+}
+
+.localnav {
+    margin:0 0 0 0;
+	position: relative;
+    /*overflow:hidden;*/
+	overflow: visible;
+}
+/* do-it-yourself ui-btn-icon-notext so not getting other button markup */
+.iconsonly a.ui-btn {
+	padding: 0.7em 1em 0.7em 2.5em !important; /*0.7em 1em*/
+}
+.iconsonly a.ui-btn:after {
+	left: 0.5625em;
+	margin-left: 0;	
+	top: 0.8em;
+	margin-top: 0;
+}
+.iconsonly .text {
+	display: inline-block;
+}
+
+/*************************************************/
+/* Form Layout		                             */
+/*************************************************/
+.hidden-accessible {
+	display: none !important;
+	position: relative;
+	left: 0;
+	text-align: right;
+	width: 0; /*this has no effect*/
+}
+
+
+/*************************************************/
+/* Appts, Blocks, Calendars forms				 */
+/*************************************************/
+/* Right-align left-right labels */
+#blockinfo label:not(.ui-checkbox-on):not(.ui-checkbox-off):not(.ui-radio-on):not(.ui-radio-off), #blockinfo legend, #calinfo label:not(.ui-checkbox-on):not(.ui-checkbox-off):not(.ui-radio-on):not(.ui-radio-off), #calinfo legend, #apptinfo label:not(.ui-checkbox-on):not(.ui-checkbox-off):not(.ui-radio-on):not(.ui-radio-off), #apptinfo legend, #prefinfo label:not(.ui-checkbox-on):not(.ui-checkbox-off):not(.ui-radio-on):not(.ui-radio-off), #prefinfo legend, #wlinfo label:not(.ui-checkbox-on):not(.ui-checkbox-off):not(.ui-radio-on):not(.ui-radio-off), #wlinfo legend, .rightlabel {
+	text-align: right !important;
+	/*line-height: 1.6;*/
+}
+#blockinfo .ui-field-contain.labelontop > label, #blockinfo .ui-field-contain.labelontop > legend {
+	text-align: left !important;
+}
+
+.selectboxlarge div.ui-select {
+	width: 500px;
+}
+/*This makes the inner input (of the jqm div container) fill the whole container*/
+#blockinfo div.ui-input-text input.ui-input-text, #calinfo div.ui-input-text input.ui-input-text, #apptinfo div.ui-input-text input.ui-input-text {
+	width: 100% !important;
+}
+.restrictedsection {
+	float: left;
+}
+
+.lineuptext .sidetextleft, .lineuptext .sidetextright {
+	font-size: 14px;
+}
+
+/*************************************************/
+/* Calendars, Blocks, Appointments				 */
+/*************************************************/
+/* Slots and Appointments */
+.slotendtime {
+	display: inline-block;
+}
+.apptwith {
+	padding-left: 2em;
+	width: 14em;
+	max-width: 14em;
+}
+
+.apptphone {
+}
+.apptemail {
+	
+}
+.apptloc {
+	display: inline-block;
+	padding-left: 1em;
+	width: 13em;
+}
+.apptblktitle {
+	display: inline-block;
+	padding-left: 1em;
+	min-width: 16em;
+}
+.moreapptdata {
+}
+
+
+/*************************************************/
+/* Waitlist                                      */
+/*************************************************/
+/* Show the table header rows and set all cells to display: table-cell */
+.waitlisttable td,
+.waitlisttable th,
+.waitlisttable tbody th,
+.waitlisttable tbody td,
+.waitlisttable thead td,
+.waitlisttable thead th,
+.apptlisttable td,
+.apptlisttable th,
+.apptlisttable tbody th,
+.apptlisttable tbody td,
+.apptlisttable thead td,
+.apptlisttable thead th {
+	display: table-cell;
+	margin: 0;
+}
+/* Hide the labels in each cell */
+.waitlisttable td .ui-table-cell-label,
+.waitlisttable th .ui-table-cell-label,
+.apptlisttable td .ui-table-cell-label,
+.apptlisttable th .ui-table-cell-label {
+	display: none;
+}
+
+.waitlisttable thead th,
+.waitlisttable tbody td,
+.apptlisttable thead th,
+.apptlisttable tbody td {
+    border-bottom: 1px solid #ebebeb;
+}
+
+.waitlisttable .addwaiterrow td:before {
+	content: '\A';
+}
+.waitlisttable .addwaiterrow td:not(:first-child) {
+	white-space: pre;
+}
+
+/* hide some columns */
+.waitlisttable th.ui-table-priority-3,
+.waitlisttable td.ui-table-priority-3,
+.apptlisttable th.ui-table-priority-3,
+.apptlisttable td.ui-table-priority-3 {
+ display: none;
+}
+.waitlisttable th.ui-table-priority-4,
+.waitlisttable td.ui-table-priority-4,
+.apptlisttable th.ui-table-priority-4,
+.apptlisttable td.ui-table-priority-4 {
+ display: none;
+}
+
+
+
+/*************************************************/
+/* Log In                                        */
+/*************************************************/
+#divLogIn {
+	float: left;
+	width: 51%;
+}
+#divLogInInfo {
+	clear: none;
+	float: left;
+	width: 47%;
+}
+
+/* Help, What's New */
+#divLogInHelp {
+	padding-right: 10px;
+}
+#divLogInHelp h2, #divLogInHelp h2:first-child {
+	float: right;
+	margin-left: 20px;
+}
+
+/* Did You Know */
+#divDidYouKnow {
+	display: block;
+	margin-top: 15px;
+	border: 1px solid #5b5d60;
+}
+#divDidYouKnow div {
+	padding: 10px 10px 5px 10px;
+	font-size:12px;
+}
+.didYouKnowContent, .didYouKnowContentDetails {
+	margin: 0;
+}
+.didYouKnowContentDetails p {
+	margin-top: 0;
+}
+.didYouKnowContent {
+	/*font-style:italic;*/
+	font-weight:600;
+	padding-bottom: 0;
+	font-size: 14px !important;
+}
+
+/* Side Info */
+#divLogInInfo h2.sideInfoHeader {
+	color: #ffffff;
+	text-align:center;
+	background-color:#e18b24;
+	padding: 6px;
+	margin: 0;
+}
+#divLogInInfo h2.sideInfoHeader a {
+	color: #ffffff;
+}
+.sideInfoNav {
+	border-top:2px solid #5b5d60;
+	text-align:right;
+}
+.sideInfoNav a{
+	text-decoration:none;
+}
+
+
+/*************************************************/
+/* Make Appointment                              */
+/*************************************************/
+.divCalendars {
+	position: relative;
+}
+.calsection {
+	position: relative;
+	clear: both;
+}
+.blockssection {
+	float: left;
+}
+#divBlockDisplay {
+	display: block;
+	width: auto;
+	margin-left: 260px;
+}
+#ulBlocks {
+	position: relative;
+	width: 250px;
+}
+.disp_on {
+	background-color: #eeeeee;
+}
+#ulBlocks .lidate.ui-li {
+	height: 0;
+	display: none;
+}
+.blocklocation:before { content: 'Location: '; }
+.courseid { display: none; }
+.coursetitle { display: block; }
+/*.noinstructorcalmsg { display: inline-block; }*/
+
+
+/*************************************************/
+/* My Appointments                               */
+/*************************************************/
+.filtergroup.ui-field-contain label {
+	width: 150px !important;
+}
+.filtergroup.ui-field-contain.datetimefilter div.ui-input-text, .filtergroup.ui-field-contain.datetimefilter div.ui-select {
+	width: 150px !important;
+}
+.filtercol1, .filtercol2, .filtercol3 {
+	margin-right: 5px;
+}
+
+
+/*************************************************/
+/* Appt                                          */
+/*************************************************/
+
+/*************************************************/
+/* Calendars                                     */
+/*************************************************/
+.liHeader { display: block !important; }
+.liHeader.ui-li-divider { min-height: 17px; }
+#divCalLists .ul-li-static { padding: 0 !important; overflow: auto; }
+
+#divCalLists .col1, #divCalLists .col2, #divCalLists .col3, #divCalLists .col4 {
+	display: block;
+	float: left;
+	width: 28%;
+	min-width: 28%;
+}
+#divCalLists .col2, #divCalLists .col3, #divCalLists .col4 {
+    padding-left: 0;
+}
+#divCalLists .col4 {
+	width: 15%;
+	min-width: 15%;
+}
+#divCalLists .col1, #divCalLists .col2, #divCalLists .col3 {
+	padding-right: 2px;
+}
+#divCalLists .noshow {
+    display: block;
+}
+#divCalLists .smalltitle {
+    display: none;
+}
+
+/*************************************************/
+/* Calendar Settings                             */
+/*************************************************/
+#divManagersAndMembers .colName, #divManagersAndMembers .colStatus, #divManagersAndMembers .colNotify, #divManagersAndMembers .colRemind, #divManagersAndMembers .colBtns {
+	display: inline-block;
+	float: left;
+}
+#divManagersAndMembers .colName {
+	width: 35%;
+}
+#divManagersAndMembers .colStatus {
+	clear: none;
+	width: 12%;
+}
+#divManagersAndMembers .colNotify, #divManagersAndMembers .colRemind {
+	width: 12%;
+	text-align: center;
+}
+#divManagersAndMembers .colNotify:before, #divManagersAndMembers .colRemind:before {
+	content: "";
+}
+#divManagersAndMembers .colBtns {
+	width: 28%;
+}
+.btnsave, .btnadd {
+	float: left;
+    /*margin-left: 30px;*/
+}
+.btndelete {
+	float: right;
+	margin-right: 0;
+}
+#divManagersAndMembers .colBtns {
+	text-align: center;
+}
+#divManagersAndMembers p {
+	 margin-top: 3px !important; 
+	 margin-bottom: 12px;
+}
+#divManagersAndMembers .ul-li { padding: 0; font-weight: normal !important; }
+#divManagersAndMembers .ui-last-child div:not(.heightfix) {
+	/*height: 50px;*/
+}
+#divManagersAndMembers .ui-last-child div:not(.heightfix):not(.colName) {
+	padding-top: 27px;
+}
+#divManagersAndMembers .ui-last-child div:before {
+	content: '\A';
+}
+/*#divManagersAndMembers .ui-last-child div:not(:first-child) {
+	white-space: pre;
+}*/
+.textmgrmem {
+	margin-bottom: 0;
+}	
+
+
+/*************************************************/
+/* View Calendar                                 */
+/*************************************************/
+#viewcal #pagetitle:before { content: 'View Calendar: '; }
+
+#viewcal .calSelector { float: left; }
+#divViewCalContent {
+	margin-top: 5px;
+}
+
+#divViewCalContent #divControlArea {
+	float: left;
+	width: 270px;
+}
+#divViewCalContent #divControlArea, #divViewCalContent #divDateScroll {
+	margin-top: 0;
+	position: relative;
+}
+#divDateScroll .calexpander a.ui-btn-icon-notext:after {
+	margin-left: -9px;
+}
+
+#divViewCalContent #divCalSelect {
+	margin-right: 15px;
+	/*width: 255px;*/
+}
+#divViewCalContent.expanded #divControlArea {
+	/*float: left;
+	width: 250px;*/
+	float: none;
+	width: 100%;
+	margin-top: 0;
+}
+/*#divViewCalContent.expanded #divCalSelect .ui-li {
+	float: left;
+}*/
+#divViewCalContent.expanded #divCalSelect .sidesection {
+	padding-right: 10px;
+	float: left;
+}
+#divViewCalContent #divBlocks {
+	margin-left: 270px;
+}
+#divViewCalContent.expanded #divBlocks {
+	position: relative;
+	display: block;
+	margin-left: 0;
+	margin-top: 20px;
+}
+.showingblockdesc {
+	/*clear: both;	*/
+	margin-right: 30px;
+	text-align: left;
+}
+.blocksection {
+    margin: 5px 0 15px 0;
+}
+
+.blocksection .urldisplay {
+	display: block;
+}
+
+.blocksection .slotendtime, .slotendtime {
+	display: inline-block;
+}
+.apptcontrols .extracontrols {
+	display: inline-block;
+}
+.apptcontrols {
+	/*margin-top: 2px !important;*/
+	margin-left: 15px !important;
+	vertical-align: bottom;
+}
+.slotapptlist .moreapptdata {
+	display: none;	
+}
+
+
+/*************************************************/
+/* View/Edit Blocks                              */
+/*************************************************/
+#divPeriod .colEvery, #divPeriod .colWeekOfMonth, #divPeriod .colDayOfWeek, #divPeriod .colDayOfMonth {
+	display: block;
+	float: left;
+}
+#divPeriod .colWeekOfMonth, #divPeriod .colDayOfWeek, #divPeriod .colDayOfMonth {
+	margin-top: 0;
+}
+#divPeriod .colEvery {
+	width: 30%;
+}
+#divPeriod .selectboxlarge div.ui-select {
+	width: 100%;
+	margin-right: 10px;
+}
+#divPeriod .selectboxmedium div.ui-select {
+	width: 170px;
+	margin-right: 10px;
+}
+#divPeriod .selectboxsmall div.ui-select {
+	width: 100px;
+	margin-right: 10px;
+}
+#blockinfo .col1, #blockinfo .col2, #blockinfo .col3 {
+	float: left;
+}
+/*#divStartTime, #divEndTime {
+	float: left;
+}*/
+.mock-ui-input-text {
+	width: 20%;
+}
+
+
+/*************************************************/
+/* Help				                             */
+/*************************************************/
+.leftHelp {
+	float:left;
+	width: 180px;	
+	height: auto;
+	overflow-y: visible;
+	border: 0 solid #ebebeb;
+	border-right:#ebebeb solid 1px;
+	margin-top: 0;
+}
+.helpsection {
+	padding-left: 20px;
+	padding-top: 0;
+	width: auto;
+	margin-left: 200px;
+}
+
+
+}  /* END 768px */
+
+
+
+
+/*@media only screen and (min-device-width: 1024px) {*/
+@media all and (min-width: 1024px) and (min-device-width: 1024px) {
+
+/*************************************************/
+/* Waitlist                                      */
+/*************************************************/
+.waitlisttable th.ui-table-priority-3,
+.waitlisttable td.ui-table-priority-3,
+.apptlisttable th.ui-table-priority-3,
+.apptlisttable td.ui-table-priority-3 {
+ display: table-cell;
+}
+.waitlisttable th.ui-table-priority-4,
+.waitlisttable td.ui-table-priority-4,
+.apptlisttable th.ui-table-priority-4,
+.apptlisttable td.ui-table-priority-4 {
+ display: table-cell;
+}
+
+
+
+/*************************************************/
+/* Log In                                        */
+/*************************************************/
+
+/*************************************************/
+/* Make Appointment                              */
+/*************************************************/
+
+/*************************************************/
+/* My Appointments                               */
+/*************************************************/
+
+/*************************************************/
+/* Appt                                          */
+/*************************************************/
+
+/*************************************************/
+/* Calendars                                     */
+/*************************************************/
+
+/*************************************************/
+/* Calendar Settings                             */
+/*************************************************/
+
+/*************************************************/
+/* View Calendar                                 */
+/*************************************************/
+.slotapptlist .moreapptdata {
+	display: inline-block;	
+}
+
+
+/*************************************************/
+/* View/Edit Blocks                              */
+/*************************************************/
+
+}  /* END 1024px */
+
+
+
+
+/*************************************************/
+/* Waitlist                                      */
+/*************************************************/
+/* Manually hidden */
+.waitlisttable th.ui-table-cell-hidden,
+.waitlisttable td.ui-table-cell-hidden {
+  display: none;
+}
+
+/* Manually shown */
+.waitlisttable th.ui-table-cell-visible,
+.waitlisttable td.ui-table-cell-visible {
+   display: table-cell;
+}
+
+
+/**************************************************/
+/* Autocomplete                                   */
+/**************************************************/
+.restrictedsection {
+	position: relative;
+	width: 220px;
+}
+.restrictedsection .ui-input-search.ui-input-has-clear .ui-btn.ui-input-clear {
+	padding-top: 0;
+}
+.autocomplete-list, .ui-content .autocomplete-list.ui-listview-insert {
+	position: absolute;
+	width: calc(100% - 16px);
+	margin: 0 !important;
+	z-index: 200;
+	max-height: 200px;
+	overflow-y: scroll;
+	display: none;
+}
+.autocomplete-list.ui-listview > .ui-li-static:nth-child(2n) {
+	border: 1px solid #5b5c60;
+	border-bottom-width: 0;
+}
+.autocomplete-list.ui-listview > .ui-li-static:nth-child(2n+1) {
+    background-color: #ffffff;
+	border: 1px solid #5b5c60;
+	border-bottom-width: 0;
+}
+.autocomplete-list li {
+    cursor: pointer;
+}
+
+/********************************************************************/
+/* Field Container for lined up fields								*/
+/********************************************************************/
+.fieldContainer > div {
+	float: left;
+}
+.fieldContainer .fieldContained {
+	float: left;
+	clear: none;
+	margin-left: 4em;
+}
+.fieldContained > label {
+	float: left;
+	margin-right: 1.5em;
+}
+.fieldContained > div {
+	float: left;
+}
+
+.checkBoxFitted .ui-controlgroup-controls {
+	width: auto;
+}
+
+div.linemeup {
+	float: left;
+	margin-top: 5px;
+	margin-left: 1em;
+}
+
+.timeslot {
+	border: 1px solid #0f192a;
+	width: 11em;
+	float: left;
+	margin-right: 1em;
+	margin-bottom: 0.7em;
+	padding: 5px 5px;
+	text-align: center;
+	font-style: italic;
+	color: #8c8c8c;
+}
+.timeslot.selected, .timeslot.selected:hover {
+	font-style: normal;
+	background-color: #cc6633;
+	color: #ffffff;
+}
+.timeslot.canselect {
+	font-style: normal;
+	color: #5b5d60;
+}
+.timeslot.canselect:hover {
+	background-color: #e18b24;
+	color: #ffffff;
+}
+.timeslot.canselect:hover, .timeslot.selected:hover {
+	cursor: pointer;
+}
+.timeslot.notavailable {
+	display: none;
+}
+.timeslot .apptstaken {
+	font-size: 0.85em;
+	display: block;
+}
+#divTimeSelect {
+	float:left;
+	clear: none;
+	width: 78%;
+}
+#divTimeSelect.ownerdisplay .timeslot {
+	min-height: 34px;
+}
+#divTimeNote {
+	margin-left: 22%;
+}

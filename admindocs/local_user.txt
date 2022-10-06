@@ -1,0 +1,37 @@
+This file documents the local user facility in WASE.
+
+WASE is designed to work with LDAP or SHIBBOLETH or CAS systems to authenticate and identify users.  If you are not running an LDAP 
+or SHIBBOLETH or CAS server, and you have a very limited set of users, you can use a facility that allows you 
+to maintain a table of users and their passwords (along with a limited set of directory information about these users).
+
+This facility consists in a set of rows, one per authenticating user. 
+
+The table consists of the following fields:
+
+userid			a text field that stores the login userid
+password		a text field that stores the password for the user
+displayname		a text field that stores the user's full name
+mail			a text field that stores the user's email address
+street			a text field that stores the user's office address
+telephonenumber	a text field that stores the user's telephone number
+
+Note that these field names correspond to the values of the LDAP attributes in the waseParmsSystem.yml file, so do not change them unless
+you also change the field names in the waseParmsSystem.yml file. 
+
+The admin directory contains a script, register.php, which you can use to maintain this table.
+
+https://wase.princeton.edu/yourinstitution/admin/register.php
+
+You must login as a super-user or as a user with the REGISTER_USERS privilege (set in your local waseParmsCustom.yml file, using the parms script).
+
+To use this facility, invoke the register.php script, then enter one ore more users into the table.  The only required field values are the userid and password.
+The other values are used as defaults when the user edits their calendar and/or makes appointments.  The script lets you search for, update and delete users.
+
+When a user goes to login in (and you are not using LDAP or SHIB or CAS), WASE will look up the user in the WaseUser table and, if found, compare
+their entered password with the password stored in the table.  
+
+If you are using LDAP for authentication, you can also use the local password facility to create "private" WASE users.  If WASE is unable 
+to locate a user in LDAP, it will try to find them in the WaseUser table, so you can create a set of private WASE users by making entries 
+in this table.  This will not work if you are using CAS or SHIB for authentication (because WASE invokes CAS or SHIB before it checks the
+local user table). 
+

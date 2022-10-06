@@ -1,0 +1,474 @@
+.monthheader, .monthfooter, .monthcontrol, .dayofweek, .dayempty, .day {
+	height: 33px;
+	padding: 2px;
+}
+.monthheader, .monthfooter, .monthcontrol {
+	background-color: #ffffff;
+	font-weight: bold;
+	font-size: 12px;
+	color: inherit;
+	text-align: center;
+}
+.monthcontrol {
+	font-size: 14px;
+}
+.monthheader, .monthcontrol {
+	background-color: #e18b24;
+	color: #ffffff;
+}
+.monthheader {
+	padding: 2px 15px 2px 15px;
+	cursor: pointer;
+}
+.monthfooter a {
+	color: #e18b24;
+}
+.monthcontrol {
+	cursor: pointer;
+}
+.dayofweek, .dayempty, .day {
+	width: 33px;
+	padding: 2px;
+}
+.weekhandle, .weekhandleempty, .weekhandleheader {
+	width: 33px;
+	height: 33px;
+	padding: 0 0 0 0;
+}
+.weekhandleheader {
+	padding: 2px 2px 2px 2px;
+	border-top: 1px solid #ebebeb;
+}
+.weekhandle, .weekhandleheader {
+	text-align: center;
+	vertical-align: middle;
+	border-bottom: 1px solid #ebebeb;
+	border-left: 1px solid #ebebeb;
+	border-right: 1px solid #5b5d60;
+}
+.weekhandle {
+	cursor: pointer;
+}
+.weekhandleempty {
+	background-color: #ffffff;	
+}
+.weekhandle, .weekhandleheader {
+	color: #5b5d60;
+	font-weight: bold;
+	font-size: 12px;
+}
+table { border-collapse: collapse; }
+tr.selected td, div.selectedkey {
+	border-bottom: 2px solid #5b5d60 !important;
+	border-top: 2px solid #5b5d60 !important;
+}
+tr.selected td:first-child, tr.monthrow.selected td:first-child, div.selectedkey {
+	border-left: 2px solid #5b5d60 !important;
+}
+tr.selected td:last-child, tr.monthrow.selected td:last-child, div.selectedkey {
+	border-right: 2px solid #5b5d60 !important;
+}
+.dayofweek {
+	color: inherit;
+	font-weight: bold;
+	font-size: 12px;
+	border-bottom: 1px solid #ebebeb;
+}
+.dayempty, .day {
+	border-left: 1px solid #ebebeb;
+	border-bottom: 1px solid #ebebeb;
+}
+/*.monthrow:nth-of-type(1) td {
+	border-top: 1px solid #ebebeb;	
+}*/
+.monthrow td:last-child {
+	border-right: 1px solid #ebebeb;	
+}
+.dayempty {
+	background-color: #FFFFFF;
+}
+.day {
+	color: #5b5d60;
+	font-weight: normal;
+	font-size: 12px;
+	cursor: pointer;
+}
+.day {
+	background-color: #FFFFFF;
+}
+
+/* classes added onto day for background-color change */
+.selected {
+	color: #000000;
+}
+td.selected {
+	position: relative;
+}
+td.selected.weekhandle {
+	position: inherit;
+	border: 2px solid #5b5d60;
+}
+td.selected:not(.weekhandle):after {
+	display: block;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	-webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+	border: 2px solid #5b5d60;
+}
+#tdCalHeader.selected {
+	border: 2px solid #ebebeb;
+}
+.noblocks {
+	background-color: #FFFFFF;
+}
+.blocksnoappsnoslots {
+    background-color: #cddeee; /*gray/blue*/
+}
+.blocksnoappsslots {
+    background-color: #cddeee; /*gray/blue*/
+}
+.blocksappsnoslots {
+    background-color: #cddeee; /*gray/blue*/
+}
+.blocksappsslots {
+    background-color: #cddeee; /*gray/blue*/
+}
+.myblocksnoappsnoslots {
+	background-color: #e18b24; /*orange*/
+}
+.myblocksnoappsslots {
+	background-color: #e18b24; /*orange*/
+}
+.myblocksappsnoslots {
+	background-color: #e18b24; /*orange*/
+}
+.myblocksappsslots {
+	background-color: #e18b24; /*orange*/
+}
+
+.myblocksappsslots {
+    background-color: #FEFE9C; /*yellow*/
+}
+.blocksmyappsslots, .myblocksmyappsslots {
+	background-color: #FEFE9C; /*yellow*/
+}
+.blocksmyappsnoslots, .myblocksmyappsnoslots {
+	background-color: #FEFE9C; /*yellow*/
+}
+
+
+
+/* divs within the TD .day */
+div.dateholder {
+	display: block;
+	position:relative;
+	width: 100%;
+	height: 100%;
+}
+div.datenum {
+	font-weight: normal;
+	position:relative;
+	padding: 1px;
+}
+div.datetext {
+	display: none;
+	font-weight: normal;
+	position:relative;
+	text-align: right;
+	padding: 1px;
+}
+div.datefooter {
+	display: none;
+}
+
+/****************************************/
+/* Time Selector 						*/
+/****************************************/
+.timelist {
+	height: 140px;
+	line-height: 20px;
+	overflow-y: auto;
+	position: absolute;
+	z-index: 1200;
+	background-color: #ffffff;
+	border: 1px solid #5b5d60;
+}
+.timeitem {
+	position: relative;
+	margin: 0;
+	padding: 0 2em 0 1em;
+	white-space: nowrap;
+}
+.timeitem:hover {
+	background-color: #ebebeb;
+}
+
+@media only screen and (min-device-width: 480px) {
+
+}
+
+.dayofweek { text-align: center; }
+.dowSunday:after, .dowSaturday:after { content: 'S'; }
+.dowMonday:after { content: 'M'; }
+.dowTuesday:after { content: 'T'; }
+.dowWednesday:after { content: 'W'; }
+.dowThursday:after { content: 'R'; }
+.dowFriday:after { content: 'F'; }
+
+@media only screen and (min-device-width: 480px) {
+.dowSunday:after { content: 'Sun'; }
+.dowSaturday:after { content: 'Sat'; }
+.dowMonday:after { content: 'Mon'; }
+.dowTuesday:after { content: 'Tue'; }
+.dowWednesday:after { content: 'Wed'; }
+.dowThursday:after { content: 'Thu'; }
+.dowFriday:after { content: 'Fri'; }
+}
+
+/*@media only screen and (min-device-width: 768px) {*/
+@media all and (min-width: 768px) and (min-device-width: 768px) {
+.monthheader, .monthfooter, .monthcontrol, .dayofweek, .dayempty, .day, .weekhandle, .weekhandleempty, .weekhandleheader {
+	height: 24px;
+}
+.dayofweek, .dayempty, .day {
+	width: 24px;
+}
+.weekhandle, .weekhandleempty, .weekhandleheader {
+	width: 24px;
+}
+}
+
+
+
+
+/****************************************************/
+/* Large Calendar, add class "fullcal" to the table */
+/****************************************************/
+
+.fullcal .monthheader, .fullcal .monthfooter, .fullcal .monthcontrol, .fullcal .dayofweek {
+	height: 20px;
+	padding: 2px;
+}
+.fullcal .dayempty, .fullcal .day {
+	/*height: 125px;
+	min-height: 100px;*/
+	height: auto;
+	overflow-x: hidden;
+	padding: 10px;
+}
+.fullcal .monthheader, .fullcal .monthcontrol {
+	font-size: 14px;
+	text-align: center;
+}
+.fullcal .monthheader {
+	padding: 2px 15px 2px 15px;
+	width: 160px;
+	font-size: 16px;
+}
+.fullcal .monthcontrol {
+	font-size: 16px;
+}
+.fullcal .dayofweek, .fullcal .dayempty, .fullcal .day {
+	width: 130px;
+	overflow-x: hidden;
+	padding: 2px;
+}
+.fullcal .dayofweek, .fullcal .monthfooter {
+	font-size: 12px;
+}
+.fullcal .day {
+	vertical-align: top;	
+}
+.fullcal div.dateholder {
+	position: relative;
+}
+.fullcal div.dateholder, .fullcal div.datetext {
+	display: block;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding: 2px;
+}
+.fullcal div.datetext {
+	min-height: 80px;
+	text-align: left;
+}
+.fullcal div.datetext .calblock {
+	padding: 3px;
+	margin-bottom: 5px;
+}
+.calblock {
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    padding-bottom: 6px;
+}
+.calblock.unavailableBlock {
+	background-color: #eeeeee;
+	font-style: italic;
+    opacity: 0.7;
+}
+.unavailableBlock .unavailText {
+	margin-top: 6px;
+	margin-left: 25%;
+	font-weight: bold;
+}
+.unavailText .ui-icon-lock {
+	position: relative;
+	float: left;
+	margin-right: 4px;
+	top: -3px;
+}
+.fullcal div.datetext .calblocktime {
+	width: 100%;
+	color: inherit;
+	text-decoration: underline;
+}
+.fullcal div.datetext .calblocktitle {
+	width: 100%;
+	color: inherit;
+	text-decoration: none;
+	font-weight: bold;
+	display: inline-block;
+}
+.fullcal div.datetext .calblockrecurring {
+    margin-bottom: 2px;
+}
+.fullcal div.datetext .calappttime {
+	color: #e18b24;
+	display: inline-block;
+	padding-left: 8px;
+	text-decoration: underline;
+}
+.fullcal div.datefooter {
+	/*position: absolute;*/
+	display: block;
+	margin-top: 3px;
+	bottom: 2px;
+	width: 100%;
+	text-align: center;
+	font-style: italic;
+	font-size: 11px;
+	color: inherit;
+}
+
+.calFooter {
+	clear: both;
+	position: relative;
+	display: block;
+}
+.calFooter div {
+	padding: 10px;
+}
+.keybutton {
+	float: left;
+	margin-left: 10px;
+}
+.todaybutton {
+	float: right;
+	margin-right: 50px;
+}
+.calSelector {
+	position: relative;
+}
+.calOverlay {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #999;
+	opacity: 0.5;
+	display: none;
+	z-index: 2;
+}
+.calKey {
+	position: absolute;
+	padding: 5px 10px 10px 10px;
+	background-color: #ffffff;
+	border: 2px solid #666;
+	bottom: 5px;
+	left: 5px;
+	display: none;
+	box-shadow: 5px 5px 4px #999;
+	z-index: 5;
+}
+.calKey .keyitem {
+	clear: both;
+	display: block;
+}
+.calKey .closeButton {
+	float: right;
+	padding: 1px 2px;
+	cursor: pointer;
+	/*font-size: 11px;*/
+}
+.calKey .closeButton:hover {
+	background-color: #cc0000;
+	color: #ffffff;
+}
+
+.hidekey { display: none; }
+.showkey {
+	border-style: solid;
+	border-color: #cccccc;
+	border-width: 2px 1px 0 1px !important;
+	background-color: #ebebeb;
+	color: #cc6633;
+}
+.showkey a {
+	color: #cc6633;
+}
+.calendarkey {
+	background-color: #ebebeb;
+	font-size: 12px;
+	color: inherit;
+}
+.calendarkey > div {
+	padding: 5px;
+	border: 1px solid #cccccc;
+}
+.calendarkey > div > div {
+	display: block;
+	height: 18px;
+	clear: both;
+	margin-bottom: 5px;
+}
+.keysymbol, .keycode {
+	float: left;
+}
+.keysymbol {
+	width: 15px;
+	height: 15px;
+	border: 1px solid #5b5d60;
+}
+.keycode {
+	font-weight: normal;
+	margin-left: 8px;
+	margin-bottom: 3px;
+	max-width: 170px;
+}
+
+.calexpander {
+	display: none;
+}
+@media all and (min-width: 768px) and (min-device-width: 768px) {
+	.calexpander {
+		display: block;
+		float: left;
+	}
+
+}
+
+.blockappointments {
+	text-align: center;
+}
+.availableAppts, .calblocktime, .calblocktitle, .calblockrecurring {
+	text-align: center;
+}
+.calblockrecurring {
+	font-style: italic;
+}

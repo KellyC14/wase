@@ -1,0 +1,142 @@
+5314 .START ****************** [CAS.php:471]
+5314 .=> phpCAS::client('2.0', 'fed.princeton.edu', 443, 'cas') [login.page.php:62]
+5314 .|    => CASClient::CASClient('2.0', false, 'fed.princeton.edu', 443, 'cas', true) [CAS.php:372]
+5314 .|    |    Starting session handling [client.php:561]
+5314 .|    |    No ticket found [client.php:564]
+5314 .|    <= ''
+5314 .<= ''
+5314 .=> phpCAS::setNoCasServerValidation() [login.page.php:63]
+5314 .<= ''
+5314 .START ****************** [CAS.php:471]
+5314 .=> phpCAS::isAuthenticated() [login.page.php:74]
+5314 .|    => CASClient::isAuthenticated() [CAS.php:1033]
+5314 .|    |    => CASClient::wasPreviouslyAuthenticated() [client.php:921]
+5314 .|    |    |    no user found [client.php:1045]
+5314 .|    |    <= false
+5314 .|    |    no ticket found [client.php:965]
+5314 .|    <= false
+5314 .<= false
+F2E6 .START ****************** [CAS.php:471]
+F2E6 .=> phpCAS::client('2.0', 'fed.princeton.edu', 443, 'cas') [login.page.php:62]
+F2E6 .|    => CASClient::CASClient('2.0', false, 'fed.princeton.edu', 443, 'cas', true) [CAS.php:372]
+F2E6 .|    |    Starting session handling [client.php:561]
+F2E6 .|    |    No ticket found [client.php:564]
+F2E6 .|    <= ''
+F2E6 .<= ''
+F2E6 .=> phpCAS::setNoCasServerValidation() [login.page.php:63]
+F2E6 .<= ''
+F2E6 .START ****************** [CAS.php:471]
+F2E6 .=> phpCAS::isAuthenticated() [login.page.php:74]
+F2E6 .|    => CASClient::isAuthenticated() [CAS.php:1033]
+F2E6 .|    |    => CASClient::wasPreviouslyAuthenticated() [client.php:921]
+F2E6 .|    |    |    no user found [client.php:1045]
+F2E6 .|    |    <= false
+F2E6 .|    |    no ticket found [client.php:965]
+F2E6 .|    <= false
+F2E6 .<= false
+F2E6 .=> phpCAS::forceAuthentication() [login.page.php:118]
+F2E6 .|    => CASClient::forceAuthentication() [CAS.php:969]
+F2E6 .|    |    => CASClient::isAuthenticated() [client.php:816]
+F2E6 .|    |    |    => CASClient::wasPreviouslyAuthenticated() [client.php:921]
+F2E6 .|    |    |    |    no user found [client.php:1045]
+F2E6 .|    |    |    <= false
+F2E6 .|    |    |    no ticket found [client.php:965]
+F2E6 .|    |    <= false
+F2E6 .|    |    => CASClient::redirectToCas(false) [client.php:825]
+F2E6 .|    |    |    => CASClient::getServerLoginURL(false, false) [client.php:1062]
+F2E6 .|    |    |    |    => CASClient::getURL() [client.php:331]
+F2E6 .|    |    |    |    <= 'https://waseqa.princeton.edu/views/pages/login.page.php'
+F2E6 .|    |    |    <= 'https://fed.princeton.edu:443/cas/login?service=https%3A%2F%2Fwaseqa.princeton.edu%2Fviews%2Fpages%2Flogin.page.php'
+F2E6 .|    |    |    Redirect to : https://fed.princeton.edu:443/cas/login?service=https%3A%2F%2Fwaseqa.princeton.edu%2Fviews%2Fpages%2Flogin.page.php
+F2E6 .|    |    |    exit()
+F2E6 .|    |    |    -
+F2E6 .|    |    -
+F2E6 .|    -
+20D8 .START ****************** [CAS.php:471]
+20D8 .=> phpCAS::client('2.0', 'fed.princeton.edu', 443, 'cas') [login.page.php:62]
+20D8 .|    => CASClient::CASClient('2.0', false, 'fed.princeton.edu', 443, 'cas', true) [CAS.php:372]
+20D8 .|    |    Starting session handling [client.php:561]
+20D8 .|    |    Ticket found [client.php:571]
+20D8 .|    |    Old active session found, saving old data and destroying session [client.php:574]
+20D8 .|    |    Session ID: ST31198zS5Gb01aek0HHVscImusfed05
+20D8 .|    |    Restoring old session vars [client.php:590]
+20D8 .|    |    ST 'ST-31198-zS5Gb01aek0HHVscImus-fed05' found [client.php:671]
+20D8 .|    <= ''
+20D8 .<= ''
+20D8 .=> phpCAS::setNoCasServerValidation() [login.page.php:63]
+20D8 .<= ''
+20D8 .START ****************** [CAS.php:471]
+20D8 .=> phpCAS::isAuthenticated() [login.page.php:74]
+20D8 .|    => CASClient::isAuthenticated() [CAS.php:1033]
+20D8 .|    |    => CASClient::wasPreviouslyAuthenticated() [client.php:921]
+20D8 .|    |    |    no user found [client.php:1045]
+20D8 .|    |    <= false
+20D8 .|    |    ST `ST-31198-zS5Gb01aek0HHVscImus-fed05' is present [client.php:930]
+20D8 .|    |    => CASClient::validateST('', NULL, NULL) [client.php:931]
+20D8 .|    |    |    => CASClient::getURL() [client.php:411]
+20D8 .|    |    |    <= 'https://waseqa.princeton.edu/views/pages/login.page.php'
+20D8 .|    |    |    => CASClient::readURL('https://fed.princeton.edu:443/cas/serviceValidate?service=https%3A%2F%2Fwaseqa.princeton.edu%2Fviews%2Fpages%2Flogin.page.php&ticket=ST-31198-zS5Gb01aek0HHVscImus-fed05', '', NULL, NULL, NULL) [client.php:1345]
+20D8 .|    |    |    <= true
+20D8 .|    |    |    user = `serge [client.php:1414]
+20D8 .|    |    <= true
+20D8 .|    |    ST `ST-31198-zS5Gb01aek0HHVscImus-fed05' was validated [client.php:932]
+20D8 .|    |    => CASClient::getURL() [client.php:970]
+20D8 .|    |    <= 'https://waseqa.princeton.edu/views/pages/login.page.php'
+20D8 .|    |    => CASClient::getURL() [client.php:971]
+20D8 .|    |    <= 'https://waseqa.princeton.edu/views/pages/login.page.php'
+20D8 .|    |    Prepare redirect to : https://waseqa.princeton.edu/views/pages/login.page.php
+20D8 .|    <= true
+20D8 .<= true
+0CE4 .START ****************** [CAS.php:471]
+71B5 .START ****************** [CAS.php:471]
+71B5 .=> phpCAS::client('2.0', 'fed.princeton.edu', 443, 'cas') [login.page.php:62]
+71B5 .|    => CASClient::CASClient('2.0', false, 'fed.princeton.edu', 443, 'cas', true) [CAS.php:372]
+71B5 .|    |    Starting session handling [client.php:561]
+71B5 .|    |    No ticket found [client.php:564]
+71B5 .|    <= ''
+71B5 .<= ''
+71B5 .=> phpCAS::setNoCasServerValidation() [login.page.php:63]
+71B5 .<= ''
+71B5 .START ****************** [CAS.php:471]
+71B5 .=> phpCAS::isAuthenticated() [login.page.php:74]
+71B5 .|    => CASClient::isAuthenticated() [CAS.php:1033]
+71B5 .|    |    => CASClient::wasPreviouslyAuthenticated() [client.php:921]
+71B5 .|    |    |    user = `serge' [client.php:1042]
+71B5 .|    |    <= true
+71B5 .|    |    user was already authenticated, no need to look for tickets [client.php:924]
+71B5 .|    <= true
+71B5 .<= true
+63C6 .START ****************** [CAS.php:471]
+63C6 .=> phpCAS::client('2.0', 'fed.princeton.edu', 443, 'cas') [login.page.php:62]
+63C6 .|    => CASClient::CASClient('2.0', false, 'fed.princeton.edu', 443, 'cas', true) [CAS.php:372]
+63C6 .|    |    Starting session handling [client.php:561]
+63C6 .|    |    No ticket found [client.php:564]
+63C6 .|    <= ''
+63C6 .<= ''
+63C6 .=> phpCAS::setNoCasServerValidation() [login.page.php:63]
+63C6 .<= ''
+63C6 .START ****************** [CAS.php:471]
+63C6 .=> phpCAS::logout() [login.page.php:68]
+63C6 .|    => CASClient::logout(array ()) [CAS.php:1279]
+63C6 .|    |    Prepare redirect to : https://fed.princeton.edu:443/cas/logout
+63C6 .|    |    exit()
+63C6 .|    |    -
+63C6 .|    -
+C83F .START ****************** [CAS.php:471]
+C83F .=> phpCAS::client('2.0', 'fed.princeton.edu', 443, 'cas') [login.page.php:62]
+C83F .|    => CASClient::CASClient('2.0', false, 'fed.princeton.edu', 443, 'cas', true) [CAS.php:372]
+C83F .|    |    Starting session handling [client.php:561]
+C83F .|    |    No ticket found [client.php:564]
+C83F .|    <= ''
+C83F .<= ''
+C83F .=> phpCAS::setNoCasServerValidation() [login.page.php:63]
+C83F .<= ''
+C83F .START ****************** [CAS.php:471]
+C83F .=> phpCAS::isAuthenticated() [login.page.php:74]
+C83F .|    => CASClient::isAuthenticated() [CAS.php:1033]
+C83F .|    |    => CASClient::wasPreviouslyAuthenticated() [client.php:921]
+C83F .|    |    |    no user found [client.php:1045]
+C83F .|    |    <= false
+C83F .|    |    no ticket found [client.php:965]
+C83F .|    <= false
+C83F .<= false

@@ -1,0 +1,18 @@
+#
+# This is the WASE GLOBAL SYSTEM parameters file.
+#
+#
+# This file holds parameters that are global for the whole WASE system (across all institutions).
+#
+# The parameters in this file should have different names from the parameters in the institution parameters files
+# to avoid confusion.  To facilitate this, all parameters here should begin with G_.
+#
+# Flag to turn the entire system ON or OFF.
+G_RUNNING: 1
+# Message to display when the system is down (RUNNING=0). 
+G_DOWNMSG: "02/24/2016 12:55pm.  The system is being upgraded to release 4.0 and should be back up by 1 pm."
+# An alert msg that is displayed until it is set to nulls. 
+G_ALERTMSG: ""
+# Contact information
+G_CONTACTNAME: "Someone, someone@somewhere.edu"
+# END OF GLOBAL PARAMETERS

@@ -1,0 +1,30 @@
+WASE: Front-End Development Information 
+
+Overview:
+WASE has top-level pages that correspond to actions that users may take.  If you own a calendar, your start page is the ‘Calendars’ page and most actions performed by Calendar owners/managers/members are on the View Calendar page (click on the Calendar to get there).  Otherwise, your start page is ‘Make Appointment’.  Here you search for a Calendar and see the block/appointment availability on that calendar.  Remember that you can log in as anyone using the ‘secret=’ method via the Guest Login prompt, which is especially helpful for troubleshooting.
+
+Development Overview:
+The WASE front-end is based on JQueryMobile, but there are widgets created from scratch.  The JavaScript is object-oriented.  The objects in WASE follow the MVC approach (Model-View-Controller).  The model objects are the primary constructs in WASE (calendars, blocks, appointments, etc).
+In general, when the PHP page (see \views below) is done loading, the $(document).ready() method within that page is executed.  Most of the initialization, including AJAX calls to populate the page with relevant data, are called within $(document).ready().
+
+File Structure (in \public):
+
+1.	\controllers: Contains the code for AJAX interactions.
+    a.	\ajax: 
+        •	wase.xsd: Definition file for AJAX calls. Most calls are XML but some of the larger calls (primarily on the View Calendar page) are done via JSON. This file is not used to validate against, but just a reference.
+        •	ajax.js: Basic JS for AJAX interactions.
+        •	waseAjax.php: Back-end code to handle all AJAX calls.  Most functions are in the form of ‘do’+top-level-XML-tag.
+    b.	JS files defining page or object front-end AJAX code (directly in \controllers): 
+        •	If ‘View’ in the file name: AJAX interactions defined for a page (i.e. ApptViewController.js has all AJAX interactions and associated code for the Appointment page within WASE).  Inherit from BaseController.js.
+        •	NOT ‘View’ in the file name: These are calls/code that are referenced from multiple pages and are related to the object itself (i.e. ApptController.js has shared appointment handling).
+
+2.	\libraries: Contains object code used across WASE pages and also general library code.
+    a.	\classes: Inherit from WASEObject.js. Define getter/setter and methods for translating back-and-forth from XML/JSON.  Objects are instantiated at the bottom of each definition file.
+
+3.	\views:
+    a.	\css: The primary file here is custom.css.  There are some ‘newer’ widget styles in formfields.css.  calendar.css defines much of the calendar layout/design (small calendars and View Calendar page).  Class names starting with ‘ui-‘ are JQueryMobile classes that I have overwritten.
+    b.	\images: Built-in JQueryMobile images as well as some ‘outside’ images.
+    c.	\pages: These are the WASE web pages, in PHP format.  Each page has a support .js file (i.e. appt.php and apptview.js).  Some HTML is include in the PHP pages, but often HTML is created ‘on the fly’ via JavaScript DOM manipulation.
+        •	Files that begin with an underscore: PHP files that begin with an underscore are files that cannot stand on their own.  They are included within other PHP files and often represent code that would be repeated on multiple pages. (_includes.php, _header.php, _footer.php, _mainmenu.php are primary examples).  Most others of these are popups.
+
+Author: Kelly Cole 

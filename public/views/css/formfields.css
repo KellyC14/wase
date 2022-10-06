@@ -1,0 +1,309 @@
+@charset "utf-8";
+
+/****************************************************************/
+/*                                                              */
+/*                                                              */
+/*                                                              */
+/****************************************************************/
+
+.fieldContainer {
+    float: left;
+    width: 78%;
+}
+.fieldContainer > div {
+    float: left;
+}
+.fieldContainer > div:not(:last-child) {
+    margin-right: 1em;
+}
+.editableSection {
+    padding: 0 20px;
+    border: 1px solid #cc6633;
+    border-radius: 0.1em;
+}
+@media all and (max-width: 768px) {
+    .editableSection {
+        clear: both;
+    }
+    .editableSection span {
+        display: block;
+    }
+}
+.editableSection span {
+    line-height: 2.2em;
+}
+.editableSection span:not(:last-child) {
+    padding-right: 1em;
+}
+.editableSection span:not(:last-child):after {
+    content: ',';
+}
+.editableSection span.novalue {
+    font-style: italic;
+    opacity: 0.9;
+}
+.editButton {
+    float: right;
+    margin-top: 0.2em;
+    margin-left: 1em;
+}
+.editButton a:after {
+    background-color: green;
+}
+
+.editableField {
+    color: #2b81af;
+}
+.editableField:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.editableField.disabled {
+    color: #5b5d60;
+    font-weight: bold;
+}
+.editableField.disabled:hover {
+    cursor: default;
+    text-decoration: none;
+}
+
+.editor {
+    display: none;
+    position: absolute;
+    border: 2px solid #5b5d60;
+    background-color: #eeeeee;
+    box-shadow: 10px 5px 5px #aaaaaa;
+    z-index: 100;
+    width: 80%;
+    left: 50%;
+    margin-left: -40%;
+    padding: 0 10px;
+}
+.editor .ui-btn.ui-input-btn {
+    float: right;
+}
+
+div.alignedText {
+    float: left;
+    line-height: 2.3em;
+    margin-left: 0.3em;
+}
+div.spacedText {
+    margin-left: 0.8em;
+}
+
+.selectListWrapper {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    border: 2px solid #5b5d60;
+    padding: 1px 7px;
+    z-index: 120;
+}
+.selectListWrapper.selecting {
+    display: block;
+}
+.selectList {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+.selectListItem {
+    cursor: pointer;
+    line-height: 1.47;
+}
+.selectListItem.selected {
+    font-weight: bold;
+}
+
+.selectListWrapper.horizontal {
+    max-width: 14.7em;
+}
+.selectListWrapper.horizontal .selectListItem {
+    float: left;
+    margin-right: 1em;
+}
+
+
+/* fields hidden if single block (not repeating) */
+#dateSection:not(.repeats) #seriesDates, #dateSection:not(.repeats) #repeatOptions, #dateSection:not(.repeats) .recurfield {
+    display: none;
+}
+/* fields hidden if repeating */
+#dateSection .enddatefield {
+    visibility: hidden;
+}
+#dateSection.repeats #repeatExample, #dateSection.repeats .startdatefield, #dateSection.repeats .enddatefield {
+    display: none;
+}
+#dateSection.repeats.editing .startdatefield {
+    display: block;
+}
+#dateSection.repeats.editing .enddatefield {
+    display: block;
+    visibility: hidden;
+}
+
+.periodsection.overnight .enddatefield, #dateSection.repeats .periodsection.overnight .startdatefield, #dateSection.repeats.editing .periodsection.overnight .enddatefield {
+    display: block !important;
+    visibility: visible !important;
+}
+@media all and (max-width: 480px) {
+    #dateSection:not(.repeats) .periodsection:not(.overnight) .endtimefield {
+        margin-top: -2.3em;
+    }
+}
+@media all and (max-width: 480px) {
+    .durationText {
+        clear: both;
+    }
+}
+/* fields to display for specific every values */
+.dowLabel, .dowValue, .domLabel, .domValue, .womLabel, .womValue {
+    display: none;
+}
+.weekly .dowLabel, .weekly .dowValue {
+    display: block;
+}
+.otherweekly .dowLabel, .otherweekly .dowValue {
+    display: block;
+}
+.monthlyday .domLabel, .monthlyday .domValue {
+    display: block;
+}
+.monthlyweekday .womLabel, .monthlyweekday .womValue, .monthlyweekday .dowValue {
+    display: block;
+}
+
+
+.dateTimeRow legend {
+    width: 20%;
+}
+#divPeriods .dateTimeRow legend {
+    width: 4em;
+}
+@media all and (min-width: 480px) and (min-device-width: 480px) {
+    .dateTimeRow legend {
+        float: left;
+        margin-top: 1em;
+        margin-right: 2%;
+    }
+}
+@media all and (min-width: 768px) and (min-device-width: 768px) {
+    .dateTimeRow legend {
+        text-align: right !important;
+    }
+}
+
+.periodsection:not(#divFirstPeriod) .dateTimeRow {
+    width: 100%;
+    margin-left: 0;
+    clear: both;
+}
+
+.dateTimeRow div {
+    float: left;
+    clear: none;
+}
+.dateTimeRow .datebox {
+    width: 9em;
+}
+.dateTimeRow .datebox.withlabel {
+    width: 17em;
+}
+@media all and (min-width: 480px) and (min-device-width: 480px) {
+    .dateTimeRow .datebox.withlabel label {
+        text-align: right;
+        margin-right: 0.6em;
+    }
+}
+.dateTimeRow .timebox label {
+    display: none;
+}
+.dateTimeRow:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media all and (max-width: 480px) {
+    #divEndDateSeries {
+        clear: both;
+    }
+    #divEndDateSeries div {
+        clear: both;
+        margin-top: 0.5em;
+    }
+    .dateTimeRow {
+        margin-top: 0.5em;
+    }
+}
+.durationText {
+    font-weight: bold;
+    color: #cc6633;
+    margin-left: 1em !important;
+}
+.deadlineSection .durationText {
+    margin-left: 0 !important;
+    color: inherit;
+    float: left;
+}
+.deadlineSection .buttonText {
+    color: #cc6633;
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+    float: left;
+    width: 10em;
+    margin-left: 1.5em;
+}
+.deadlineMsg {
+    float: left;
+    margin-left: 0.6em;
+}
+
+.ownerSelect .ui-select {
+    width: 20em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+@media all and (max-width: 768px) {
+    .ownerSelect .ui-select {
+        margin-bottom: 0.6em;
+    }
+}
+#cgRepeats .ui-checkbox {
+    width: 9em;
+    float: left;
+}
+#cgRepeats .ui-checkbox label, .divOvernight .ui-checkbox label {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+.ui-page-theme-a .divOvernight .ui-checkbox .ui-btn {
+    border-width: 0;
+}
+@media all and (min-width: 768px) and (min-device-width: 768px) {
+    .divOvernight {
+        margin-left: 14px;
+    }
+
+    .ui-field-contain.telephone .ui-input-text {
+        width: 8em;
+    }
+    .ui-field-contain.email .ui-input-text {
+        width: 26em;
+    }
+    .ui-field-contain.username .ui-input-text {
+        width: 26em;
+    }
+}
+.ui-field-contain.datebox label, .ui-field-contain.timebox label {
+    width: 8em;
+}
+.ui-field-contain.datebox .ui-input-text {
+    width: 8em;
+}
+.ui-field-contain.timebox .ui-input-text {
+    width: 7em !important;
+}

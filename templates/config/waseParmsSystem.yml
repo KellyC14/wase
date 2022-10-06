@@ -1,0 +1,168 @@
+#
+# This is the WASE SYSTEM parameters file.
+#
+#
+# The WASE parameters for an institution are stored in two files:
+#   The SYSTEM file holds parameters that are set by WASE staff and cannot be directly changed by the institution.
+#   The CUSTOM file holds parameters that are set by the institution initially, and can be modified by the institution.
+#
+# When an instituion is added, the CUSTOM file needs to be filled in by the institution, or in consultation with them.  
+# The SYSTEM part (this file) is filled in as a part of the institution setup.  Details are discussed in the 
+# "Setting up an institution to use WASE" document, in the admindocs directory.
+#
+#
+# The PHP error_reporting level.
+ERROR_LEVEL: 7
+# The version of WASE that that is running for the institution.
+WASE_VERSION: "V1.0"
+# Internal debugging flags that trigger the generation of log messages.
+DEBUG: ""
+#
+# The short name of the institution. This MUST match the config directory name.
+# Example: INSNAME: "princeton"
+INSNAME: "InstitutionName"
+# The logo for the institution (default is homelogo.png).
+# Leave this as is unless you want to build a logo file and send it to me.
+# Example: INSHOMELOGO: "princetonlogo.png"
+INSHOMELOGO: "homelogo.png"
+#
+# Database parameters
+#
+# Hostname of the machine running the MySQL service, or path to socket file (used in mysql_connect call). 
+HOST: ":/wasss/home/wasss/mysql/data/mysql.sock" 
+# Name of MySQL database for storing WASE tables. 
+DATABASE: "waseinstitution"  
+# Userid associated with the MySQL database. 
+USER: "waseinstitution"
+# Password associated with the MySQL database. This also becomes the administrator password. 
+PASS: "something" 
+#
+# WASS database parameters (specify if migrating from WASS to WASE).  Leave null if not.
+#
+WASS_HOST: "" 
+# Name of MySQL database for storing WASE tables. 
+WASS_DATABASE: "wass"
+# Userid associated with the MySQL database. 
+WASS_USER: "something"
+# Password associated with the MySQL database. This also becomes the administrator password. 
+WASS_PASS: "something" 
+# MySQL character set
+WASS_CHARSET: "latin1"
+#
+# Users who can do anything.  
+#
+SUPER_USERS: ""
+#
+# The following parameters control how WASE authenticates users.  
+#
+# The types of authentication supported by WASE
+#
+AUTHCAS: "CAS"
+AUTHLDAP: "LDAP"
+AUTHLOCAL: "LOCAL"
+AUTHSHIB: "SHIB"
+# The type of authentication performed by this institution.
+AUTHTYPE: "CAS"
+#
+# CAS parameters
+# If you are using CAS, the version of CAS you are using. 
+# Example: CASversion: "2.0".  Note:  this HAS TO BE a protocol version, not a release.  "2.0" or "3.0".
+CASversion: "2.0"
+# Host of CAS. 
+# Example: CAShost: "fed.princeton.edu"
+CAShost: ""
+# If you are using CAS, the CAS port. 
+# Example: CASport: 443 
+CASport: 443 
+# If you are using CAS, the CAS uri. 
+# Example: CASuri: "cas"
+CASuri: "cas"
+# If you are using CAS, the CAS name. 
+# Example: CASname: "CAS"
+CASname: "CAS"
+# If you are using CAS, the CAS logout URL. 
+# Example: CASlogout: "https://fed.princeton.edu/cas/logout"
+CASlogout: ""
+#
+# Parameters for SHIB authentication
+#
+# simplesaml sp definition to use.
+SHIBSP: "default-sp"
+# The URL of the SHIB Identity Provider
+SHIBIDP: ""
+# The SHIB attribute used to store login userid
+SHIBUSERID: ""
+# The SHIB attribute used to store full name
+SHIBNAME: ""
+# The SHIB attribute used to store office address
+SHIBOFFICE: ""
+# The SHIB attribute used to store email address
+SHIBEMAIL: ""
+# The SHIB attribute used to store phone number
+SHIBPHONE: ""
+# Email address to send the SHIB attribute array returned by the institution. Set to nulls except when debugging.
+SHIBDUMPEMAIL: ""
+# Logout URL, if supported by the institution.
+SHIBLOGOUT: ""
+# Name of system to use in SHIB logout msg to user.
+SHIBSYSNAME: ""
+#
+# Parameters for LOCAL authentication
+#
+# Whether people can self-register (otherwise, administrator registers people).  Set to 1 if true, else 0.
+SELF_REGISTER: 0
+#
+# The following parameters control the use of LDAP by WASE.  WASE uses LDAP to pre-fill various fields on its forms (name, address, telephone number. etc.).
+# WASE can also use LDAP to authenticate users.
+#
+# NOTE:  WASE MUST BE ABLE TO ACCESS YOUR LDAP SERVER.  If you have LDAP behind a firewall, leave this field null.  Otherwise WASE will hang.
+#
+# Name of Class that implements directory functions
+DIRECTORY: "Directory"
+# Example: LDAP: "ldap.princeton.edu"
+LDAP: "ldap.yourinstitution.edu"
+# TCP port for connection to the LDAP server (usually 636). 
+# Example: LPORT: "636"
+LPORT: "636"
+# LDAP base domain name (distinquished name). 
+# Example: BDN: "o=Princeton University,c=US"
+BDN: "o=PYour University,c=US"
+# LDAP login parameters (if required, e.g., LDAP does not support un-authenticated binds).  If you lave these blank,
+# WASE will attempt an annonymous bind.
+# LDAP login userid.
+LDAPLOGIN: ""
+# LDAP login password.
+LDAPPASS : ""
+#
+# The following parameters control how WASE looks up information in LDAP.
+#
+# The LDAP attribute name for the field that holds a full name. 
+LDAPNAME: "displayname"
+# The LDAP attribute name for the field that holds a primary telephone number. 
+LDAPPHONE: "telephonenumber"
+# The LDAP attribute name for the field that holds an office or room location. 
+LDAPOFFICE: "street"
+# The LDAP attribute name for the field that holds a primary email address. 
+LDAPEMAIL: "mail"
+# The LDAP attribute name for the field that holds a netid (userid). 
+LDAPNETID: "uid"
+# The prompt for entering an LDAP/AD group name when restricting by AD group membership
+GROUPIDPROMPT: "Enter an Active Directory (AD or LDAP) group name."
+# Whether or not to allow appointment view/make to be restricted by AD group ID.
+ADRESTRICTED: 0
+#
+# The following parameters control the Google synchronization.  Details are in the "Setup" file in admindocs.
+#
+# Google API developer key
+GOOGLEKEY: "AIzaSyDaqVnWU3Wz2pBAhLepeZxjnxOFtVzLA-k"
+# Google API client id
+GOOGLEID: "172080472225-v1dfn8gstc3umco2sek2f1qbcnfm5d3d.apps.googleusercontent.com"
+# Google API client secret
+GOOGLESECRET: "MpqRJGh2q9dWsVwlReBZ_c4P"
+#
+# Parameters used by WASE to read (Imap) its own email (to handle iCal synchronization).
+#
+EMAILSERVER: "{exchangeimap.princeton.edu:993/imap/ssl/novalidate-cert}INBOX"
+EMAILLOGIN: "Wassprof"
+EMAILPASS: "Wa;;pr0f"
+# END OF SYSTEM PARAMETERS

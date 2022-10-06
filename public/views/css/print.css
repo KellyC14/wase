@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+@media print {
+
+.ui-content {
+	margin: 2em !important;
+}
+#divHeader, .actionbuttons, .ui-footer {
+	display: none !important;
+}
+
+/* my appts */
+#divApptFilter, #divFilters, #divWaitlist, .waitlisttitle {
+	display: none !important;
+}
+#listappts > .instructions {
+	display: none !important;
+}
+.slotendtime, .apptloc, .apptblktitle {
+	display: inline-block !important;	
+}
+.apptwith {
+	width: 11em;
+}
+.apptloc {
+	width: 9em;
+}
+.apptblktitle {
+	width: 9em;
+}
+
+/* view calendar */
+#divControlArea {
+	display: none;
+}
+.listbuttonouter {
+	display: inline-block !important;
+}
+/*li {
+	padding: 0px !important;
+	padding-left: 2px !important;
+	vertical-align: top;
+}*/
+
+}
